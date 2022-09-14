@@ -1,5 +1,27 @@
 body * {
   outline: 1px solid lightgrey;
 }
+.main-menu li{
+  display: inline;
+}
+.container {
+  border: solid 3px red;
+}
+.container.sub-menu {
+  border: dotted 3px green;
+}
+.blocks-paragraph span {
+  display: block;
+}
+.container.blocks-paragraph p {
+  color: green;
+}
+.paragraph p {
+  display:inline-block;
+  color: blue;
+}
 
+.container.paragraph {
+  border: double 3px green;
+}
 
