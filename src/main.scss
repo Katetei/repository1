@@ -1,27 +1,49 @@
-body * {
-  outline: 1px solid lightgrey;
+// body * {
+//   outline: 1px solid lightgrey;
+// }
+.green-block {
+  background-color: #358765;
+  min-height: 49px;
+  width: 15%;
+  margin: 20px auto;
 }
-.main-menu li{
-  display: inline;
+.blocks {
+  width: 442px;
+  margin: 0 auto;
 }
-.container {
-  border: solid 3px red;
+.dark-green {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  margin-bottom: 20px;
 }
-.container.sub-menu {
-  border: dotted 3px green;
+.item {
+  background-color: #588924;
+  min-height: 116px;
+  width: 30%;
 }
-.blocks-paragraph span {
-  display: block;
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.container.blocks-paragraph p {
-  color: green;
+.red, .blue, .yellow {
+  height: 147px;
+  width: 10%;
 }
-.paragraph p {
-  display:inline-block;
-  color: blue;
+.red {
+  background-color: red;
 }
-
-.container.paragraph {
-  border: double 3px green;
+.blue {
+  background-color: blue;
 }
-
+.yellow {
+  background-color: yellow;
+}
+.grey {
+  background-color: grey;
+  height: 55px;
+  width: 30%;
+  margin: 0 auto
+}
