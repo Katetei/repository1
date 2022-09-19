@@ -1,49 +1,63 @@
-// body * {
-//   outline: 1px solid lightgrey;
-// }
-.green-block {
-  background-color: #358765;
-  min-height: 49px;
-  width: 15%;
-  margin: 20px auto;
+body * p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
 }
-.blocks {
-  width: 442px;
+
+.logo {
+  font-weight: bold;
+  font-size: 36px;
+  color: white;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.letter {
+  display: flex;
   margin: 0 auto;
+  justify-content: center;
 }
-.dark-green {
-  display: flex;
-  align-items: center;
-  justify-content:space-evenly;
-  margin-bottom: 20px;
-}
-.item {
-  background-color: #588924;
-  min-height: 116px;
-  width: 30%;
-}
-.colors {
-  display: flex;
+
+.logo-nav {
+  display:none;
+  position: relative;
+  left: 100%;
+  width: 300%;
+  margin: 0 auto;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5%;
+  border-width: 1px;
+  }
+
+.logo-nav p {
+  font-size: 16px;
+  color: black;
+  font-weight: normal;
+  display: block;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
-.red, .blue, .yellow {
-  height: 147px;
-  width: 10%;
+
+.main-hover, .about-hover, .services-hover {
+  display:none;
+  position: absolute;
+  left: 102%;
+  top: 0%;
+  width: auto;
+  padding: 0 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 5%;
 }
-.red {
-  background-color: red;
+.logo:hover .logo-nav, .main:hover .main-hover, .about:hover .about-hover, .services:hover .services-hover {
+  display: block;
+  align-items: flex-start;
 }
-.blue {
-  background-color: blue;
+.main:hover .main-p, .about:hover .about-p, .services:hover .services-p, .portfolio:hover p, .contacts:hover p {
+  font-weight: bold;
 }
-.yellow {
-  background-color: yellow;
-}
-.grey {
-  background-color: grey;
-  height: 55px;
-  width: 30%;
-  margin: 0 auto
-}
+ 
