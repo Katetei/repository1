@@ -1,36 +1,33 @@
 // body * {
 //   outline: 1px solid lightgrey;
 // }
-.green-block {
+.header {
   background-color: #358765;
   min-height: 49px;
-  width: 15%;
+  width: 33.3%;
   margin: 20px auto;
 }
-.blocks {
-  width: 442px;
-  margin: 0 auto;
-}
-.dark-green {
+.green-blocks {
   display: flex;
-  align-items: center;
-  justify-content:space-evenly;
-  margin-bottom: 20px;
 }
+
 .item {
   background-color: #588924;
   min-height: 116px;
-  width: 30%;
+  width: 100%;
+  margin: 20px 30px;
 }
+
 .colors {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .red, .blue, .yellow {
-  height: 147px;
-  width: 10%;
+  min-height: 147px;
+  width: 100%;
 }
 .red {
   background-color: red;
@@ -41,9 +38,9 @@
 .yellow {
   background-color: yellow;
 }
-.grey {
+.footer {
   background-color: grey;
   height: 55px;
-  width: 30%;
-  margin: 0 auto
+  width: auto;
+  margin-top: 20px;
 }
