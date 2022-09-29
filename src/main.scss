@@ -1,12 +1,13 @@
 .container {
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     max-width: 1210px;
 }
 .main {
     margin-bottom: 17px;
+    justify-content: space-between;
 }
 .logo {
     display: flex;
@@ -55,32 +56,126 @@ font-size: 37px;
     margin-top: 5px;
 }
 
-.banner__text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.banner__screen {
     background-image: url(../img/big-orange-bg.png);
     background-size: cover;
-border-top: #fb9c06 solid 5px;
-    min-height: 400px;
-    font-size: 37px;
+    border-top: #fb9c06 solid 5px;
+    border-bottom: #fb9c06 solid 5px;
+    height: 400px;
+}
+
+.banner__content {
+    display: flex;
+    height: 100%;
+}
+
+.banner__text {
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px;
+    align-items: center
 }
 .banner__text p {
-margin-left: 266px;
-margin-right: 0px;
-text-transform: uppercase;
+    text-transform: uppercase;
+    font-size: 37px;
+    margin: 0;
+}
+
+.banner__text .rabbits{
+    color:#fb9c06;
+    background-color: #4c4f4f;
+    padding: 0 30px;
+}
+.banner__text .oranges {
+    color: #6e6d6b;
+    background-color: #fcc759;
+    padding: 0 30px;
 }
 .info {
     align-items: flex-start;
+    margin-top: 20px;
 }
 .info__item {
-    width: 300px;
-    margin-left: 30px;
-    margin-right: 19px;
+    width: 25%;
+    margin-right: 42px;
 }
+.info__item:last-child {
+    margin-right: 0px;
+}
+
 .info__item a {
     color: #fb9c06;
-    
 }
   
-  
+.team {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+h3 {
+    text-decoration: underline;
+    color: #fb9c06;
+    font-size: 40px;
+    font-weight: normal;
+}
+.team__block {
+display: flex;
+ justify-content: space-between;
+ width: 100%;
+}
+.team__block-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+}
+.team__block-item-title {
+display: flex;
+}
+
+.team__block-item .name, .team__item-description  {
+    color: #6e6d6b;
+}
+
+.team__block-item .position {
+    color: #fb9c06;
+}
+
+.team__block-item-photo {
+background-image: url(../img/horse-photo.png);
+height: 300px;
+width: 300px;
+border-radius: 50%;
+background-size:cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+position: relative;
+}
+.team__block-item-photo::after {
+    content: "";
+    position: absolute;
+    border: #fb9c06 6px solid;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.subscribe {
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+.subscribtion-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.subscribtion-form div {
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    width: 1065px;
+}
