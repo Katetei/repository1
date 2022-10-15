@@ -1,0 +1,42 @@
+.team__block-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.team__block-item-title {
+display: flex;
+}
+
+.team__block-item .name, .team__item-description  {
+    color: #6e6d6b;
+    font-family: Calibri-light;
+}
+
+.team__block-item .position {
+    color: $orange-color;
+    font-family: Calibri-light;
+}
+
+.team__block-item-photo {
+    background-image: url(../img/horse-photo.png);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    }
+    
+    .team__block-item-photo::after {
+        content: "";
+        position: absolute;
+        border: $orange-color 6px solid;
+        border-radius: 50%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }

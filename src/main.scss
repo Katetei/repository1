@@ -16,11 +16,12 @@
     src: url(../fonts/StMarie-Thin.ttf);
 }
 
+@import "./variables.scss";
+
+
 .container {
     margin: 0 auto;
     display: flex;
-    
-    align-items: center;
     max-width: 1210px;
 }
 
@@ -98,6 +99,7 @@ font-family: Calibri-normal;
 .banner__content {
     display: flex;
     height: 100%;
+    align-items: center;
 }
 
 .banner__text {
@@ -131,8 +133,40 @@ font-family: Calibri-normal;
     padding-top: 20px;
 }
 
+
 .info__item {
-    padding-left: 42px;
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 25%;
+
+    &__content {
+    max-height: 140px;
+    overflow: hidden;
+    transition: max-height linear 1s;
+    }
+    &__toggler {
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+        color: $orange-color;
+        font-family: Calibri-light-italic;    
+    }
+    input {
+        display: none;}
+
+    &__input--more:checked ~ &__content {
+        max-height: 100vh;
+        transition: max-height linear 1s;
+    }
+
+    &__input--more:checked ~ &__toggler--more {
+        display: none;
+    }
+
+    &__input--less:checked ~ &__toggler--less {
+        display: none;
+    }
+
 }
 
 .info__item:last-child {
@@ -142,14 +176,9 @@ font-family: Calibri-normal;
 .info__item p {
     font-family: Calibri-normal;
 }
-
-.info__item a {
-    color: $orange-color;
-    font-family: Calibri-light-italic;
-    align-content: right;
-}
   
 .team {
+    align-items: center;
     flex-direction: column;
     margin-top: 20px;
 }
@@ -194,7 +223,7 @@ background-image: url(../img/horse-photo.png);
 height: 300px;
 width: 300px;
 border-radius: 50%;
-background-size:cover;
+background-size:auto;
 background-repeat: no-repeat;
 background-position: 50% 50%;
 position: relative;
@@ -211,28 +240,95 @@ position: relative;
     right: 0;
 }
 
-.subscribe {
-    flex-direction: column;
-    margin-top: 20px;
-    width: 100%;
+.team__block-item-photo2 {
+    background-image: url(../img/bird-photo.png);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    }
+    
+    .team__block-item-photo2::after {
+        content: "";
+        position: absolute;
+        border: $orange-color 6px solid;
+        border-radius: 50%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+.team__block-item-photo3 {
+        background-image: url(../img/rabbit-photo.png);
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-size:auto;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: relative;
+        }
+        
+    .team__block-item-photo3::after {
+            content: "";
+            position: absolute;
+            border: $orange-color 6px solid;
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+.subscribe-form { 
+flex-direction: column;
 }
 
-.subscribtion-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.subscribe-form h3 {
+    text-align: center;
 }
 
-.subscribtion-form div {
-    display: flex;
-    justify-content: space-between;
-}
-
-input {
-    width: 1065px;
-}
-
-.subscribtion-form p {
+.rabbit-form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
     font-family: St-Marie-thin;
+    font-size: 24px;
     color: $orange-color;
+}
+
+.submit-btn {
+flex-direction: row-reverse;
+margin-top: 20px;
+}
+.btn {
+    text-decoration: none;
+    color: #FFF;
+    font-family: St-Marie-thin;
+    font-size: 30px;
+    background-color: $orange-color;
+    padding: 15px 35px;
+
+}
+
+.footer {
+    flex-direction: column;
+    align-items: center;
+    background-color: $orange-color;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+.footer p {
+    color: #FFF;
+    font-family: St-Marie-thin;
+    font-size: 30px;
+    margin: 0;
+
+
 }
