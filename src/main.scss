@@ -74,10 +74,24 @@ font-family: Calibri-normal;
 }
 
 .menu__item p {
+    text-decoration: none;
     margin-bottom: 0px;
     color: #6e6d6b;
     font-family: Calibri-normal;
     font-size: 22px;
+}
+
+.menu__item p:hover {
+    text-decoration: none;
+    color: $orange-color;
+}
+
+.menu__item a {
+    text-decoration: none;
+}
+
+.menu__item img:hover {
+    width: 105%;
 }
 
 .contact-icon {
@@ -105,7 +119,7 @@ font-family: Calibri-normal;
 .banner__text {
     display: flex;
     flex-direction: column;
-    column-gap: 30px;
+    row-gap: 30px;
     align-items: center
 }
 
@@ -313,9 +327,11 @@ margin-top: 20px;
     font-size: 30px;
     background-color: $orange-color;
     padding: 15px 35px;
-
 }
 
+.btn:hover {
+    background-color: #fcc759;
+}
 .footer {
     flex-direction: column;
     align-items: center;
