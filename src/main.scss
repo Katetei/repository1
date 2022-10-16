@@ -2,10 +2,12 @@
     font-family: "Calibri-normal";
     src: url(../fonts/Calibri.ttf);
 }
+
 @font-face {
     font-family: "Calibri-light";
     src: url(../fonts/calibril.ttf);
 }
+
 @font-face {
     font-family: "Calibri-light-italic";
     src: url(../fonts/calibrili.ttf);
@@ -43,10 +45,10 @@
 }
 
 .first__line {
-color: $orange-color;
-font-size: 37px;
-text-align: center;
-font-family: Calibri-normal;
+    color: $orange-color;
+    font-size: 37px;
+    text-align: center;
+    font-family: Calibri-normal;
 
 
 }
@@ -130,7 +132,7 @@ font-family: Calibri-normal;
     font-family: 'Bebas Neue', cursive;
 }
 
-.banner__text .rabbits{
+.banner__text .rabbits {
     color: $orange-color;
     background-color: #4c4f4f;
     padding: 0 30px;
@@ -154,30 +156,33 @@ font-family: Calibri-normal;
     width: 25%;
 
     &__content {
-    max-height: 140px;
-    overflow: hidden;
-    transition: max-height linear 1s;
+        max-height: 140px;
+        overflow: hidden;
+        transition: max-height linear 1s;
     }
+
     &__toggler {
         display: inline-block;
         width: 100%;
         text-align: right;
         color: $orange-color;
-        font-family: Calibri-light-italic;    
+        font-family: Calibri-light-italic;
     }
-    input {
-        display: none;}
 
-    &__input--more:checked ~ &__content {
+    input {
+        display: none;
+    }
+
+    &__input--more:checked~&__content {
         max-height: 100vh;
         transition: max-height linear 1s;
     }
 
-    &__input--more:checked ~ &__toggler--more {
+    &__input--more:checked~&__toggler--more {
         display: none;
     }
 
-    &__input--less:checked ~ &__toggler--less {
+    &__input--less:checked~&__toggler--less {
         display: none;
     }
 
@@ -190,7 +195,7 @@ font-family: Calibri-normal;
 .info__item p {
     font-family: Calibri-normal;
 }
-  
+
 .team {
     align-items: center;
     flex-direction: column;
@@ -206,9 +211,9 @@ h3 {
 }
 
 .team__block {
-display: flex;
- justify-content: space-between;
- width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .team__block-item {
@@ -219,10 +224,11 @@ display: flex;
 }
 
 .team__block-item-title {
-display: flex;
+    display: flex;
 }
 
-.team__block-item .name, .team__item-description  {
+.team__block-item .name,
+.team__item-description {
     color: #6e6d6b;
     font-family: Calibri-light;
 }
@@ -233,14 +239,14 @@ display: flex;
 }
 
 .team__block-item-photo {
-background-image: url(../img/horse-photo.png);
-height: 300px;
-width: 300px;
-border-radius: 50%;
-background-size:auto;
-background-repeat: no-repeat;
-background-position: 50% 50%;
-position: relative;
+    background-image: url(../img/horse-photo.png);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
 }
 
 .team__block-item-photo::after {
@@ -259,47 +265,47 @@ position: relative;
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background-size:auto;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
-    }
-    
-    .team__block-item-photo2::after {
-        content: "";
-        position: absolute;
-        border: $orange-color 6px solid;
-        border-radius: 50%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
+}
+
+.team__block-item-photo2::after {
+    content: "";
+    position: absolute;
+    border: $orange-color 6px solid;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 .team__block-item-photo3 {
-        background-image: url(../img/rabbit-photo.png);
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-        background-size:auto;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        position: relative;
-        }
-        
-    .team__block-item-photo3::after {
-            content: "";
-            position: absolute;
-            border: $orange-color 6px solid;
-            border-radius: 50%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
+    background-image: url(../img/rabbit-photo.png);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+}
 
-.subscribe-form { 
-flex-direction: column;
+.team__block-item-photo3::after {
+    content: "";
+    position: absolute;
+    border: $orange-color 6px solid;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.subscribe-form {
+    flex-direction: column;
 }
 
 .subscribe-form h3 {
@@ -317,9 +323,10 @@ flex-direction: column;
 }
 
 .submit-btn {
-flex-direction: row-reverse;
-margin-top: 20px;
+    flex-direction: row-reverse;
+    margin-top: 20px;
 }
+
 .btn {
     text-decoration: none;
     color: #FFF;
@@ -332,6 +339,7 @@ margin-top: 20px;
 .btn:hover {
     background-color: #fcc759;
 }
+
 .footer {
     flex-direction: column;
     align-items: center;
@@ -345,6 +353,4 @@ margin-top: 20px;
     font-family: St-Marie-thin;
     font-size: 30px;
     margin: 0;
-
-
 }
