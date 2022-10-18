@@ -27,7 +27,7 @@
     max-width: 1210px;
 }
 
-.main {
+.header {
     margin-bottom: 17px;
     justify-content: space-between;
 }
@@ -49,8 +49,6 @@
     font-size: 37px;
     text-align: center;
     font-family: Calibri-normal;
-
-
 }
 
 .second__line {
@@ -83,25 +81,25 @@
     font-size: 22px;
 }
 
-.menu__item p:hover {
-    text-decoration: none;
+
+.menu__item-link p:hover {
     color: $orange-color;
 }
 
-.menu__item a {
-    text-decoration: none;
+.menu__item-link img:hover {
+box-shadow: 0px 0px 5px 1px rgba(255, 157, 0, 0.228);
 }
 
-.menu__item img:hover {
-    width: 105%;
-}
+.work-icon {
+margin-top: 4px;
+ }
 
-.contact-icon {
-    margin-top: 11px;
+ .contact-icon {
+ margin-top: 13px;
 }
 
 .blog-icon {
-    margin-top: 5px;
+margin-top: 7px;
 }
 
 .banner__screen {
@@ -113,7 +111,6 @@
 }
 
 .banner__content {
-    display: flex;
     height: 100%;
     align-items: center;
 }
@@ -202,12 +199,17 @@
     margin-top: 20px;
 }
 
-h3 {
+.name span {
+    padding-left: 0;
+    margin-left: 0;
+}
+.title-h3 {
     font-family: St-Marie-thin;
     text-decoration: underline;
     color: $orange-color;
     font-size: 40px;
     font-weight: normal;
+    text-align: center;
 }
 
 .team__block {
@@ -223,9 +225,6 @@ h3 {
     width: 300px;
 }
 
-.team__block-item-title {
-    display: flex;
-}
 
 .team__block-item .name,
 .team__item-description {
@@ -240,10 +239,9 @@ h3 {
 
 .team__block-item-photo {
     background-image: url(../img/horse-photo.png);
-    height: 300px;
-    width: 300px;
+    padding: 50%;
     border-radius: 50%;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
@@ -262,10 +260,9 @@ h3 {
 
 .team__block-item-photo2 {
     background-image: url(../img/bird-photo.png);
-    height: 300px;
-    width: 300px;
+    padding: 50%;
     border-radius: 50%;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
@@ -284,8 +281,7 @@ h3 {
 
 .team__block-item-photo3 {
     background-image: url(../img/rabbit-photo.png);
-    height: 300px;
-    width: 300px;
+    padding: 50%;
     border-radius: 50%;
     background-size: auto;
     background-repeat: no-repeat;
@@ -308,11 +304,7 @@ h3 {
     flex-direction: column;
 }
 
-.subscribe-form h3 {
-    text-align: center;
-}
-
-.rabbit-form {
+.inputs {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-column-gap: 30px;
@@ -340,17 +332,17 @@ h3 {
     background-color: #fcc759;
 }
 
-.footer {
-    flex-direction: column;
-    align-items: center;
-    background-color: $orange-color;
+footer {
     margin-top: 30px;
-    padding: 10px 0;
+    
 }
 
-.footer p {
+footer p {
+    text-align: center;
     color: #FFF;
     font-family: St-Marie-thin;
     font-size: 30px;
     margin: 0;
+    padding: 10px 0;
+    background-color: $orange-color;
 }

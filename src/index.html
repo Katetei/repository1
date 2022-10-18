@@ -16,8 +16,7 @@
 </head>
 
 <body>
-  <header>
-    <div class="main container">
+  <header class="header container">
       <div class="logo">
         <img src="./img/logo.png" alt="logo" class="logo-rabbit">
         <div class="logo__text">
@@ -26,49 +25,38 @@
         </div>
       </div>
       <nav class="menu">
-        <div class="menu__item">
-          <a href="home###">
+        <a href="home###" class="menu__item-link">
+          <div class="menu__item">
             <img src="./img/home-icon.png" alt="home" class="home-icon">
-          </a>
-          <a href="home###">
             <p>home</p>
-          </a>
-        </div>
-        <div class="menu__item">
-          <a href="about###">
+          </div>
+        </a>
+        <a href="about###" class="menu__item-link">
+          <div class="menu__item">
             <img src="./img/about-icon.png" alt="about" class="about-icon">
-          </a>
-          <a href="about###">
             <p>about</p>
-          </a>
-        </div>
-        <div class="menu__item">
-          <a href="work###">
+          </div>
+        </a>
+        <a href="work###" class="menu__item-link">
+          <div class="menu__item">
             <img src="./img/work-icon.png" alt="work" class="work-icon">
-          </a>
-          <a href="work###">
             <p>work</p>
-          </a>
-
-        </div>
-        <div class="menu__item">
-          <a href="blog###">
+          </div>
+        </a>
+        <a href="blog###" class="menu__item-link">
+          <div class="menu__item">
             <img src="./img/blog-icon.png" alt="blog" class="blog-icon">
-          </a>
-          <a href="blog###">
             <p>blog</p>
-          </a>
-        </div>
-        <div class="menu__item">
-          <a href="contact###">
+          </div>
+        </a>
+        <a href="contact###" class="menu__item-link">
+          <div class="menu__item">
+
             <img src="./img/contact-icon.png" alt="contact" class="contact-icon">
-          </a>
-          <a href="contact###">
             <p>contact</p>
-          </a>
-        </div>
+          </div>
+        </a>
       </nav>
-    </div>
   </header>
   <div class="banner__screen">
     <div class="container banner__content">
@@ -153,14 +141,12 @@
     </div>
   </div>
   <div class="container team">
-    <h3>Meet the team</h3>
+    <h3 class="title-h3">Meet the team</h3>
     <div class="team__block">
       <div class="team__block-item">
-        <div class="team__block-item-title">
-          <p class="name">
-            Hoof -<span class="position"> Lead Designer</span>
-          </p>
-        </div>
+        <p class="name">
+          Hoof -<span class="position"> Lead Designer</span>
+        </p>
         <div class="team__block-item-photo">
         </div>
         <div class="team__item-description">
@@ -170,11 +156,9 @@
         </div>
       </div>
       <div class="team__block-item">
-        <div class="team__block-item-title">
-          <p class="name">
-            Nibs -<span class="position"> CEO/Director</span>
-          </p>
-        </div>
+        <p class="name">
+          Nibs -<span class="position"> CEO/Director</span>
+        </p>
         <div class="team__block-item-photo2">
         </div>
         <div class="team__item-description">
@@ -184,11 +168,9 @@
       </div>
 
       <div class="team__block-item">
-        <div class="team__block-item-title">
-          <p class="name">
-            Squawk -<span class="position"> Developer</span>
-          </p>
-        </div>
+        <p class="name">
+          Squawk -<span class="position"> Developer</span>
+        </p>
         <div class="team__block-item-photo3">
         </div>
         <div class="team__item-description">
@@ -200,29 +182,31 @@
   </div>
 
   <div class="container subscribe-form">
-    <h3>Send us a message</h3>
+    <h3 class="title-h3">Send us a message</h3>
     <form action="get" class="rabbit-form">
-      <label for="name" class="rabbit-form__input">
-        Name:
-      </label>
-      <input type="text" id="name">
-      <label for="email" class="rabbit-form__input">
-        Email:
-      </label>
-      <input type="text" id="email">
-      <label for="message" class="rabbit-form__input">
-        Message:
-      </label>
-      <textarea id="message"></textarea>
+      <div class="inputs">
+        <label for="name" class="rabbit-form__input">
+          Name:
+        </label>
+        <input type="text" id="name">
+        <label for="email" class="rabbit-form__input">
+          Email:
+        </label>
+        <input type="text" id="email">
+        <label for="message" class="rabbit-form__input">
+          Message:
+        </label>
+        <textarea id="message"></textarea>
+      </div>
+      <div class="container submit-btn">
+        <a href="###" class="btn">Submit</a>
+      </div>
     </form>
-  </div>
-  <div class="container submit-btn">
-    <a href="###" class="btn">Submit</a>
+
   </div>
   <footer>
-    <div class="container footer">
-      <p>COPYRIGHT ORANGE RABBIT - DESIGNED BY JAKE BHATT, </p>
-    </div>
+    <p>COPYRIGHT ORANGE RABBIT - DESIGNED BY JAKE BHATT, </p>
   </footer>
 </body>
+
 </html>
