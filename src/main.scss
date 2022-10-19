@@ -80,7 +80,9 @@
     font-family: Calibri-normal;
     font-size: 22px;
 }
-
+.menu__item-link {
+    text-decoration: none;
+}
 
 .menu__item-link p:hover {
     color: $orange-color;
@@ -241,7 +243,7 @@ margin-top: 7px;
     background-image: url(../img/horse-photo.png);
     padding: 50%;
     border-radius: 50%;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
@@ -262,7 +264,7 @@ margin-top: 7px;
     background-image: url(../img/bird-photo.png);
     padding: 50%;
     border-radius: 50%;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
