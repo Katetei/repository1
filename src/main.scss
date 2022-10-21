@@ -3,6 +3,14 @@ body {
     margin: 0 auto;
 }
 
+p, li {
+    margin: 0;
+    font-size: 14px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    color: #333333;
+}
+
 .screen {
     max-width: 940px;
 }
@@ -16,25 +24,83 @@ body {
     max-width: 620px;
 }
 
-  
 .menu {
     display: flex;
+    margin-bottom: 22px;
     background-color: #d7d8d9;
     font-size: 18px;
     font-family: "PT Sans";
     color: rgb(51, 51, 51);
-    padding: 8px 16px;
+
+    & p {
+        padding: 8px 16px;
+    }
 }
 
+.menu p:hover {
+    background-color: #333;
+    color: #fff;
+}
 .slider {
     display: flex;
+
+    & img {
+        max-width: 380px;
+    }
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "PT Serif";
+    color: rgb(200, 0, 0);
+}
+
+.slider__text {
+    padding: 0 22px;
+    background-color: #f7f9fa;
+    
+    &  p {
+    color: rgb(51, 51, 51);
+}
 }
 
 .main-news__items {
     display: flex;
+    justify-content: space-between;
+
+    & .news-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 141px;
+    row-gap: 5px;
+}
+}
+
+.title {
+    font-size: 24px;
+    font-family: "PT Sans";
+    font-weight: 400;
+}
+
+.container-sub {
+    max-width: 300px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 .video .news-item {
     display: flex;
+    column-gap: 10px;
+
+    & p {
+        font-weight: 700;
+    }
+}
+.video h3 {
+    margin: 0;
 }
 
 .second, .second .container {
@@ -59,18 +125,11 @@ body {
 
   
   
-  // .Hot_themes {
+// .EURO_2016_Playoffs______El__Classico {
 //     font-size: 18px;
 //     font-family: "PT Sans";
-//     color: rgb(255, 255, 255);
+//     color: rgb(51, 51, 51);
 //     line-height: 1.056;
-//   }
-
-.EURO_2016_Playoffs______El__Classico {
-    font-size: 18px;
-    font-family: "PT Sans";
-    color: rgb(51, 51, 51);
-    line-height: 1.056;
   
 
 //   .Jurgen_Klopp_makes_a_sexy_Liverpool {
@@ -97,3 +156,17 @@ body {
 //   }
 
 
+.The_FIFA_Ballon_d_Or_is_an_annual_association_f {
+    font-size: 14px;
+    font-family: "PT Sans";
+    color: rgb(51, 51, 51);
+    line-height: 1.286;
+    text-align: left;
+    position: absolute;
+    left: 231px;
+    top: 506.1px;
+    width: 138px;
+    height: 64px;
+    z-index: 79;
+  }
+  
