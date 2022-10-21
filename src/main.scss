@@ -1,350 +1,99 @@
-@font-face {
-    font-family: "Calibri-normal";
-    src: url(../fonts/Calibri.ttf);
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
-@font-face {
-    font-family: "Calibri-light";
-    src: url(../fonts/calibril.ttf);
+.screen {
+    max-width: 940px;
 }
 
-@font-face {
-    font-family: "Calibri-light-italic";
-    src: url(../fonts/calibrili.ttf);
+.first {
+    display: flex;
+    justify-content: space-between
 }
-
-@font-face {
-    font-family: "St-Marie-thin";
-    src: url(../fonts/StMarie-Thin.ttf);
-}
-
-@import "./variables.scss";
-
 
 .container {
-    margin: 0 auto;
-    display: flex;
-    max-width: 1210px;
+    max-width: 620px;
 }
 
-.header {
-    margin-bottom: 17px;
-    justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    column-gap: 40px;
-    align-items: center;
-}
-
-.logo__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.first__line {
-    color: $orange-color;
-    font-size: 37px;
-    text-align: center;
-    font-family: Calibri-normal;
-}
-
-.second__line {
-    text-transform: uppercase;
-    color: #6e6d6b;
-    font-size: 37px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Bebas Neue', cursive;
-}
-
+  
 .menu {
     display: flex;
-    column-gap: 50px;
+    background-color: #d7d8d9;
+    font-size: 18px;
+    font-family: "PT Sans";
+    color: rgb(51, 51, 51);
+    padding: 8px 16px;
 }
 
-.menu__item {
+.slider {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px 7px;
 }
 
-.menu__item p {
-    text-decoration: none;
-    margin-bottom: 0px;
-    color: #6e6d6b;
-    font-family: Calibri-normal;
-    font-size: 22px;
-}
-.menu__item-link {
-    text-decoration: none;
-}
-
-.menu__item-link p:hover {
-    color: $orange-color;
-}
-
-.menu__item-link img:hover {
-box-shadow: 0px 0px 5px 1px rgba(255, 157, 0, 0.228);
-}
-
-.work-icon {
-margin-top: 4px;
- }
-
- .contact-icon {
- margin-top: 13px;
-}
-
-.blog-icon {
-margin-top: 7px;
-}
-
-.banner__screen {
-    background-image: url(../img/big-orange-bg.png);
-    background-size: cover;
-    border-top: $orange-color solid 5px;
-    border-bottom: $orange-color solid 5px;
-    height: 400px;
-}
-
-.banner__content {
-    height: 100%;
-    align-items: center;
-}
-
-.banner__text {
+.main-news__items {
     display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    align-items: center
 }
-
-.banner__text p {
-    text-transform: uppercase;
-    font-size: 37px;
-    margin: 0;
-    font-family: 'Bebas Neue', cursive;
-}
-
-.banner__text .rabbits {
-    color: $orange-color;
-    background-color: #4c4f4f;
-    padding: 0 30px;
-}
-
-.banner__text .oranges {
-    color: #6e6d6b;
-    background-color: #fcc759;
-    padding: 0 30px;
-}
-
-.info {
-    align-items: flex-start;
-    padding-top: 20px;
-}
-
-
-.info__item {
-    padding-left: 20px;
-    padding-right: 10px;
-    width: 25%;
-
-    &__content {
-        max-height: 140px;
-        overflow: hidden;
-        transition: max-height linear 1s;
-    }
-
-    &__toggler {
-        display: inline-block;
-        width: 100%;
-        text-align: right;
-        color: $orange-color;
-        font-family: Calibri-light-italic;
-    }
-
-    input {
-        display: none;
-    }
-
-    &__input--more:checked~&__content {
-        max-height: 100vh;
-        transition: max-height linear 1s;
-    }
-
-    &__input--more:checked~&__toggler--more {
-        display: none;
-    }
-
-    &__input--less:checked~&__toggler--less {
-        display: none;
-    }
-
-}
-
-.info__item:last-child {
-    margin-right: 0px;
-}
-
-.info__item p {
-    font-family: Calibri-normal;
-}
-
-.team {
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.name span {
-    padding-left: 0;
-    margin-left: 0;
-}
-.title-h3 {
-    font-family: St-Marie-thin;
-    text-decoration: underline;
-    color: $orange-color;
-    font-size: 40px;
-    font-weight: normal;
-    text-align: center;
-}
-
-.team__block {
+.video .news-item {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
 }
 
-.team__block-item {
-    align-items: center;
+.second, .second .container {
     display: flex;
-    flex-direction: column;
-    width: 300px;
 }
 
 
-.team__block-item .name,
-.team__item-description {
-    color: #6e6d6b;
-    font-family: Calibri-light;
+.newsfeed .news-item {
+    display: flex;
 }
 
-.team__block-item .position {
-    color: $orange-color;
-    font-family: Calibri-light;
+.interesting .news-item {
+    display: flex;
 }
 
-.team__block-item-photo {
-    background-image: url(../img/horse-photo.png);
-    padding: 50%;
-    border-radius: 50%;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
+.review {
+    max-width: 940px;
+    display: flex;
+
 }
 
-.team__block-item-photo::after {
-    content: "";
-    position: absolute;
-    border: $orange-color 6px solid;
-    border-radius: 50%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 
-.team__block-item-photo2 {
-    background-image: url(../img/bird-photo.png);
-    padding: 50%;
-    border-radius: 50%;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-}
+  
+  
+  // .Hot_themes {
+//     font-size: 18px;
+//     font-family: "PT Sans";
+//     color: rgb(255, 255, 255);
+//     line-height: 1.056;
+//   }
 
-.team__block-item-photo2::after {
-    content: "";
-    position: absolute;
-    border: $orange-color 6px solid;
-    border-radius: 50%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+.EURO_2016_Playoffs______El__Classico {
+    font-size: 18px;
+    font-family: "PT Sans";
+    color: rgb(51, 51, 51);
+    line-height: 1.056;
+  
 
-.team__block-item-photo3 {
-    background-image: url(../img/rabbit-photo.png);
-    padding: 50%;
-    border-radius: 50%;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-}
+//   .Jurgen_Klopp_makes_a_sexy_Liverpool {
+//     font-size: 30px;
+//     font-family: "PT Serif";
+//     color: rgb(200, 0, 0);
+//     line-height: 1.2;
+//   }
 
-.team__block-item-photo3::after {
-    content: "";
-    position: absolute;
-    border: $orange-color 6px solid;
-    border-radius: 50%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+//   .Liverpool_outcast_Jose_Enrique_set_to_be_handed {
+//     font-size: 14px;
+//     font-family: "PT Sans";
+//     color: rgb(51, 51, 51);
+//     line-height: 1.286;
+//   }
 
-.subscribe-form {
-    flex-direction: column;
-}
+//   .Видео {
+//     font-size: 18px;
+//     font-family: "PT Sans";
+//     color: rgb(106, 0, 153);
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     line-height: 1.667;
+//   }
 
-.inputs {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
-    font-family: St-Marie-thin;
-    font-size: 24px;
-    color: $orange-color;
-}
 
-.submit-btn {
-    flex-direction: row-reverse;
-    margin-top: 20px;
-}
-
-.btn {
-    text-decoration: none;
-    color: #FFF;
-    font-family: St-Marie-thin;
-    font-size: 30px;
-    background-color: $orange-color;
-    padding: 15px 35px;
-}
-
-.btn:hover {
-    background-color: #fcc759;
-}
-
-footer {
-    margin-top: 30px;
-    
-}
-
-footer p {
-    text-align: center;
-    color: #FFF;
-    font-family: St-Marie-thin;
-    font-size: 30px;
-    margin: 0;
-    padding: 10px 0;
-    background-color: $orange-color;
-}
