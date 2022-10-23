@@ -28,59 +28,53 @@
       </div>
   
   <div class="container main-news">
-    <h2 class="title main-news">Main News</h2>
+    @@include("./partials/title-style/_title-style.html", {
+      "title-text": "Main News",
+      "type": "dark"
+    })
     <div class="main-news__items">
-
-      <div class="news-item">
-        <img src="./img/main-news-1.png" alt="">
-        <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-      </div>
-
-      <div class="news-item">
-        <img src="./img/main-news-1.png" alt="">
-        <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-      </div>
-
-      <div class="news-item">
-        <img src="./img/main-news-1.png" alt="">
-        <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-      </div>
-
-      <div class="news-item">
-        <img src="./img/main-news-1.png" alt="">
-        <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-      </div>
-
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/main-news-1.png",
+        "news-item-text": "The FIFA Ballon d'Or is an annual association football award given by FIFA"
+      })
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/main-news-2.png",
+        "news-item-text": "Messi got some balloons"
+      })
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/main-news-3.png",
+      "news-item-text": "CR7 also, but not so much"
+    })
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/main-news-4.png",
+      "news-item-text": "Ribery got vase!"
+    })
     </div>
   </div>
 </header>
   <div class="container-sub video">
     <h3 class="title video-news">Видео</h3>
-    <div class="news-item">
-      <img src="./img/video-news-1.png" alt="">
-      <p>Фильм дня: Гитлер Капут!</p>
-    </div>
-
-    <div class="news-item">
-      <img src="./img/video-news-1.png" alt="">
-      <p>Фильм дня: Гитлер Капут!</p>
-    </div>
-
-    <div class="news-item">
-      <img src="./img/video-news-1.png" alt="">
-      <p>Фильм дня: Гитлер Капут!</p>
-    </div>
-
-    <div class="news-item">
-      <img src="./img/video-news-1.png" alt="">
-      <p>Фильм дня: Гитлер Капут!</p>
-    </div>
-
-    <div class="news-item">
-      <img src="./img/video-news-1.png" alt="">
-      <p>Фильм дня: Гитлер Капут!</p>
-    </div>
-    <p>Больше видео</p>
+        @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/video-news-1.png",
+      "news-item-text": "Фильм дня: Гитлер Капут!"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/video-news-2.png",
+      "news-item-text": "Ксения Собчак беременна"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/video-news-3.png",
+      "news-item-text": "Группа парней избила влюбленную пару бейсбольной битой"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/video-news-4.png",
+      "news-item-text": "Небесные ласточки: двухсерийная музыкальная комедия"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/video-news-5.png",
+      "news-item-text": "На дополнительном кастинге 'Хочу в ВИА Гру' девушек просили"
+    })
+    <p class="more-video">Больше видео</p>
 
   </div>
 </section>
@@ -89,119 +83,125 @@
   <div class="container"> 
   <div class="news">
     <div class="last-news">
-      <h2 class="title last-news">
-        Last News
-      </h2>
-      <li>Real Madrid players to gaffer: up and at 'em!</li>
-      <li>Swedes indebted to talismanic Ibrahimovic</li>
-      <li>2016 European Championship to go ahead in France</li>
-      <li>Ancelotti: "Premier League return is my no. 1 choice"</li>
-      <li>Walters double secures Euro 2016 spot for Ireland</li>
-      <li>"They intended to set off an explosive inside the stadium" - eyewitness</li>
-      <li>Raúl bids goodbye in style</li>
-      <li>Five reasons Belgium vs. Spain was called off</li>
-      <li>Niggles won't keep Benzema out of 'Clásico'</li>
-      <li>Abdeslam suspected to have been near King Baudouin Stadium</li>
+      @@include("./partials/title-style/_title-style.html", {
+        "title-text": "Last News",
+        "type": "blue"
+      })
+      <li><a href="">Real Madrid players to gaffer: up and at 'em!</a></li>
+      <li><a href="">Swedes indebted to talismanic Ibrahimovic</a></li>
+      <li><a href=""> 2016 European Championship to go ahead in France</a></li>
+      <li><a href=""> Ancelotti: "Premier League return is my no. 1 choice"</a></li>
+      <li><a href=""> Walters double secures Euro 2016 spot for Ireland</a></li>
+      <li><a href="">"They intended to set off an explosive inside the stadium" - eyewitness</a></li>
+      <li><a href=""> Raúl bids goodbye in style</a></li>
+      <li><a href=""> Five reasons Belgium vs. Spain was called off </a></li>
+      <li><a href=""> Niggles won't keep Benzema out of 'Clásico'</a></li>
+      <li><a href=""> Abdeslam suspected to have been near King Baudouin Stadium</a></li>
     </div>
     <div class="newsfeed">
-      <h2 class="title newsfeed">
-        Newsfeed
-      </h2>
-      <div class="news-item">
-        <img src="./img/main-news-1.png" alt="">
-        <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-      </div>
-      <li>Real Madrid players to gaffer: up and at 'em!</li>
-      <li>Swedes indebted to talismanic Ibrahimovic</li>
-      <li>2016 European Championship to go ahead in France</li>
-      <li>Ancelotti: "Premier League return is my no. 1 choice"</li>
+      @@include("./partials/title-style/_title-style.html", {
+        "title-text": "Newsfeed",
+        "type": "blue"
+      })
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/newsfeed-news-1.png",
+        "news-item-text": "Zlatan Ibrahimovic on target as Sweden qualify with draw in Denmark"
+      })
+      <li><a href="">Real Madrid players to gaffer: up and at 'em!</a></li>
+      <li><a href="">Swedes indebted to talismanic Ibrahimovic</a></li>
+      <li><a href="">2016 European Championship to go ahead in France</a></li>
+      <li><a href="">Ancelotti: "Premier League return is my no. 1 choice"</a></li>
     </div>
   </div>
   <div class="photo-news">
-    <div class="photo-news-item">
-    <img src="./img/photo-news1.png" alt="">
-    <p>Here is how Leage Champions trophy looks like
-    </p>
-  </div>
-
-  <div class="photo-news-item">
-    <img src="./img/photo-news1.png" alt="">
-    <p>Here is how Leage Champions trophy looks like
-    </p>
-  </div>
-
-  <div class="photo-news-item">
-    <img src="./img/photo-news1.png" alt="">
-    <p>Here is how Leage Champions trophy looks like
-    </p>
-  </div>
-
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/photo-news1.png",
+      "news-item-text": "Here is how Leage Champions trophy looks like"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/photo-news-2.png",
+      "news-item-text": "Casillas got some piece of paper"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/photo-news-3.png",
+      "news-item-text": "Bayern Munich vs Barcelona. Fangirls"
+    })
 </div>
   </div>  
   
 
   <div class="container-sub interesting">
-    <h3 class="title video-news">Интересные статьи</h3>
-    <div class="news-item">
-      <img src="./img/main-news-1.png" alt="">
-      <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-    </div>
-
-    <div class="news-item">
-      <img src="./img/main-news-1.png" alt="">
-      <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-    </div>
-
-    <div class="news-item">
-      <img src="./img/main-news-1.png" alt="">
-      <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-    </div>
-
-  <div class="news-item">
-    <img src="./img/main-news-1.png" alt="">
-    <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-  </div>
-
-<div class="news-item">
-  <img src="./img/main-news-1.png" alt="">
-  <p>The FIFA Ballon d'Or is an annual association football award given by FIFA</p>
-</div>
+    @@include("./partials/title-style/_title-style.html", {
+      "title-text": "Интересные статьи",
+      "type": "dark"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/int-news-1.png",
+      "news-item-text": "Испанский политик полностью оделась для глянца"
+    })
+    @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/int-news-2.png",
+        "news-item-text": "Анджелина Джоли сильно похудела"
+      })
+    @@include("./partials/news-items/_news-item.html", {
+          "news-item__img": "./img/int-news-3.png",
+          "news-item-text": "Исполнить мечту и умереть: История 14-летней девочки..."
+        })
+    @@include("./partials/news-items/_news-item.html", {
+            "news-item__img": "./img/int-news-4.png",
+            "news-item-text": "Ирина Билык сказала, что думает о повзрослевшей Алине..."
+    })
+    @@include("./partials/news-items/_news-item.html", {
+      "news-item__img": "./img/int-nes-5.png",
+      "news-item-text": " 7 'смертных грехов': чего нельзя делать в отношениях"
+})
 </div>
 </section>
 
   <footer>
-    <h2 class="title review">
-      Обзор
-    </h2>
+    @@include("./partials/title-style/_title-style.html", {
+      "title-text": "Обзор",
+      "type": "dark"
+    })
     <div class="review">
       <div class="review-item">
       <h4>Знакомства</h4>
-      <img src="./img/review-news-1.png" alt="">
-      <p>Отношения актеров в кино и в реальной жизни</p>
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/review-news-1.png",
+        "news-item-text": " 7 'смертных грехов': чего нельзя делать в отношениях"
+      })
     </div>
 
     <div class="review-item">
       <h4>Знакомства</h4>
-      <img src="./img/review-news-1.png" alt="">
-      <p>Отношения актеров в кино и в реальной жизни</p>
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/review-news-2.png",
+        "news-item-text": "Отношения актеров в кино и в реальной жизни"
+      })
     </div> 
 
     <div class="review-item">
       <h4>Знакомства</h4>
-      <img src="./img/review-news-1.png" alt="">
-      <p>Отношения актеров в кино и в реальной жизни</p>
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/review-news-3.png",
+        "news-item-text": "Отношения актеров в кино и в реальной жизни"
+      })
     </div>
 
     <div class="review-item">
-      <h4>Знакомства</h4>
-      <img src="./img/review-news-1.png" alt="">
-      <p>Отношения актеров в кино и в реальной жизни</p>
+      <h4>Приколы</h4>
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/review-news-4.png",
+        "news-item-text": "Отношения актеров в кино и в реальной жизни"
+      })
     </div>
 
     <div class="review-item">
-      <h4>Знакомства</h4>
-      <img src="./img/review-news-1.png" alt="">
-      <p>Отношения актеров в кино и в реальной жизни</p>
+      <h4>Авто</h4>
+      @@include("./partials/news-items/_news-item.html", {
+        "news-item__img": "./img/review-news-5.png",
+        "news-item-text": "Отношения актеров в кино и в реальной жизни"
+      })
     </div>
 
     </div>

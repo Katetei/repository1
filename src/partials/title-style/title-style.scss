@@ -1,0 +1,30 @@
+.title-text {
+    display: flex;
+    align-items: baseline;
+    font-size: 24px;
+    font-family: "PT Sans";
+    font-weight: 400;
+
+    &.dark {
+        color: #333333;
+    
+    &::after {
+        content:"";
+        border-bottom: 2px solid #333333;
+        flex: 1 0 auto;
+        margin-left: 5px;
+    }
+}
+
+    &.blue {
+        color: #3d76cc;
+    
+    &::after {
+        content:"";
+        border-bottom: 2px solid #c80000;
+        flex: 1 0 auto;
+        margin-left: 5px;
+    }
+}
+
+}

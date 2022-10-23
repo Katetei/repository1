@@ -1,9 +1,12 @@
+@import "./partials/title-style/title-style.scss";
+
 body {
-    box-sizing: border-box;
     margin: 0 auto;
+    max-width: 940px;
+    padding-top: 10px;
 }
 
-p, li {
+ p, li {
     margin: 0;
     font-size: 14px;
     font-family: "PT Sans";
@@ -22,6 +25,7 @@ p, li {
 
 .container {
     max-width: 620px;
+    column-gap: 20px;
 }
 
 .menu {
@@ -41,9 +45,11 @@ p, li {
     background-color: #333;
     color: #fff;
 }
+
 .slider {
     display: flex;
-
+    border-bottom: 4px solid #c80000;
+    
     & img {
         max-width: 380px;
     }
@@ -52,7 +58,7 @@ p, li {
 h1 {
     font-size: 30px;
     font-family: "PT Serif";
-    color: rgb(200, 0, 0);
+    color: #c80000;
 }
 
 .slider__text {
@@ -76,12 +82,6 @@ h1 {
 }
 }
 
-.title {
-    font-size: 24px;
-    font-family: "PT Sans";
-    font-weight: 400;
-}
-
 .container-sub {
     max-width: 300px;
 }
@@ -95,6 +95,10 @@ h1 {
     display: flex;
     column-gap: 10px;
 
+    & .news-item__img {
+        max-width: 138px;
+    }
+
     & p {
         font-weight: 700;
     }
@@ -103,70 +107,74 @@ h1 {
     margin: 0;
 }
 
+.more-video {
+    font-size: 18px;
+    color: #3d76cc;
+
+    &::after {
+        content: "";
+        border-bottom: 4px solid #000;
+        display: block;
+    }
+}
 .second, .second .container {
     display: flex;
+    justify-content: space-between;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.5em;
+
+    &:hover {
+     color: #3d76cc;
+     text-decoration: underline;
+    }
+}
 
 .newsfeed .news-item {
     display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+    & p{
+    font-weight: 700;
+    line-height: 1.5em;
+}
+    & img {
+        max-width: 100px;
+    }
 }
 
-.interesting .news-item {
+.photo-news {
     display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    & p{
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+.interesting {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+ & .news-item {
+    display: flex;
+    column-gap: 10px;
+    & p {
+       font-size: 18px;
+    }
+    & img {
+        max-width: 100px;
+    }
+}
 }
 
 .review {
     max-width: 940px;
     display: flex;
-
 }
-
-
-  
-  
-// .EURO_2016_Playoffs______El__Classico {
-//     font-size: 18px;
-//     font-family: "PT Sans";
-//     color: rgb(51, 51, 51);
-//     line-height: 1.056;
-  
-
-//   .Jurgen_Klopp_makes_a_sexy_Liverpool {
-//     font-size: 30px;
-//     font-family: "PT Serif";
-//     color: rgb(200, 0, 0);
-//     line-height: 1.2;
-//   }
-
-//   .Liverpool_outcast_Jose_Enrique_set_to_be_handed {
-//     font-size: 14px;
-//     font-family: "PT Sans";
-//     color: rgb(51, 51, 51);
-//     line-height: 1.286;
-//   }
-
-//   .Видео {
-//     font-size: 18px;
-//     font-family: "PT Sans";
-//     color: rgb(106, 0, 153);
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     line-height: 1.667;
-//   }
-
-
-.The_FIFA_Ballon_d_Or_is_an_annual_association_f {
-    font-size: 14px;
-    font-family: "PT Sans";
-    color: rgb(51, 51, 51);
-    line-height: 1.286;
-    text-align: left;
-    position: absolute;
-    left: 231px;
-    top: 506.1px;
-    width: 138px;
-    height: 64px;
-    z-index: 79;
-  }
-  
