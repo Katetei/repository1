@@ -53,7 +53,10 @@
   </div>
 </header>
   <div class="container-sub video">
-    <h3 class="title video-news">Видео</h3>
+    @@include("./partials/title-style/_title-style.html", {
+      "title-text": "Видео",
+      "type": "dark"
+    })
         @@include("./partials/news-items/_news-item.html", {
       "news-item__img": "./img/video-news-1.png",
       "news-item-text": "Фильм дня: Гитлер Капут!"
