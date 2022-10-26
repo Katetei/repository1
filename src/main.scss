@@ -6,7 +6,7 @@ body {
     padding-top: 10px;
 }
 
- p, li {
+ p, li, a, h4 {
     margin: 0;
     font-size: 14px;
     font-family: "PT Sans";
@@ -82,6 +82,10 @@ h1 {
 }
 }
 
+.main-news h2 {
+    margin-top: 30px
+}
+
 .container-sub {
     max-width: 300px;
 }
@@ -104,6 +108,7 @@ h1 {
     }
 }
 .video .title-text {
+    margin-top: 5px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -125,6 +130,7 @@ h1 {
 }
 
 .more-video {
+    margin-top: 30px;
     font-size: 18px;
     color: #3d76cc;
 
@@ -139,15 +145,21 @@ h1 {
     justify-content: space-between;
 }
 
-a {
+a, a p {
     text-decoration: none;
-    cursor: pointer;
-    line-height: 1.5em;
-
+    
     &:hover {
+    cursor: pointer;
      color: #3d76cc;
      text-decoration: underline;
     }
+}
+.news a {
+line-height: 1.6em;
+}
+
+.last-news h2 {
+    margin: 0;
 }
 
 .newsfeed .news-item {
@@ -164,10 +176,20 @@ a {
     }
 }
 
+.newsfeed h2 {
+    margin-bottom: 0;
+}
+
 .photo-news {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+
+    & .news-item {
+        display: flex;
+        flex-direction: column;
+        max-width: 220px;
+    }
 
     & p{
         font-size: 18px;
@@ -178,6 +200,7 @@ a {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    justify-content: center;
 
  & .news-item {
     display: flex;
@@ -192,6 +215,7 @@ a {
 }
 
 .interesting .title-text {
+    margin-top: 0;
     flex-direction: column;
         &::after {
             content:"";
@@ -204,4 +228,18 @@ a {
 .review {
     max-width: 940px;
     display: flex;
+    column-gap: 20px;
+    justify-content: space-evenly;
+
+}
+.review-item .news-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    
+}
+
+.review-item h4 {
+    color: red;
+    font-weight: 500;
 }
