@@ -4,277 +4,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- <link rel="stylesheet" href="./fonts/slick.ttf">  -->
   <link rel="stylesheet" href="./main.scss">
   <title>Homework 6</title>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/044cbb4e31.js" crossorigin="anonymous" defer></script>
   <script src="./js/main.js" defer></script>
-  <script src="https://kit.fontawesome.com/044cbb4e31.js" crossorigin="anonymous"></script>
-  
- 
 </head>
 
 <body>
-  <section class="first screen">
-  <header class="container header">
-      <nav class="menu">
-        <p>Hot themes</p>
-        <p>EURO-2016 Playoffs</p>
-        <p>El'Classico</p>
-      </nav>
-      <div class="slider">
-        <img src="./img/slider-img.png" alt="banner">
-        <div class="slider__text">
-          <h1>Jurgen Klopp makes a sexy Liverpool</h1>
-          <p>Liverpool outcast Jose Enrique set to be handed lifeline by Jurgen Klopp</p>
+  <div class="main-screen">
+    <section class="first screen">
+      <header class="container header">
+        <nav class="menu">
+          <p>Hot themes</p>
+          <p>EURO-2016 Playoffs</p>
+          <p>El'Classico</p>
+        </nav>
+        <div class="main-slider slick-slider">
+          <div class="slider">
+
+            <img src="./img/slider-img.png" alt="banner">
+            <div class="slider__text">
+              <h1>Jurgen Klopp makes a sexy Liverpool</h1>
+              <p>Liverpool outcast Jose Enrique set to be handed lifeline by Jurgen Klopp</p>
+            </div>
+
+          </div>
+          <div class="slider">
+            <img src="./img/slider-img.png" alt="banner">
+            <div class="slider__text">
+              <h1>Jurgen Klopp makes a sexy Liverpool</h1>
+              <p>Liverpool outcast Jose Enrique set to be handed lifeline by Jurgen Klopp</p>
+            </div>
+          </div>
+        </div>
+        <div class="container main-news">
+          @@include("./partials/title-style/_title-style.html", {
+          "title-text": "Main News",
+          "type": "dark"
+          })
+          <div class="main-news__items">
+            @@include("./partials/news-items/_news-item.html", {
+            "news-item-link": "###",
+            "news-item__img": "./img/main-news-1.png",
+            "news-item-text": "The FIFA Ballon d'Or is an annual association football award given by FIFA"
+            })
+            @@include("./partials/news-items/_news-item.html", {
+            "news-item-link": "###",
+            "news-item__img": "./img/main-news-2.png",
+            "news-item-text": "Messi got some balloons"
+            })
+            @@include("./partials/news-items/_news-item.html", {
+            "news-item-link": "###",
+            "news-item__img": "./img/main-news-3.png",
+            "news-item-text": "CR7 also, but not so much"
+            })
+            @@include("./partials/news-items/_news-item.html", {
+            "news-item-link": "###",
+            "news-item__img": "./img/main-news-4.png",
+            "news-item-text": "Ribery got vase! ",
+            "fa-icon": "fa-camera"
+            })
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="news">
+          <div class="last-news">
+            @@include("./partials/title-style/_title-style.html", {
+            "title-text": "Last News",
+            "type": "blue"
+            })
+            <li><a href="">Real Madrid players to gaffer: up and at 'em!</a></li>
+            <li><a href="">Swedes indebted to talismanic Ibrahimovic</a></li>
+            <li><a href=""> 2016 European Championship to go ahead in France</a></li>
+            <li><a href=""> Ancelotti: "Premier League return is my no. 1 choice"</a></li>
+            <li><a href=""> Walters double secures Euro 2016 spot for Ireland</a></li>
+            <li><a href="">"They intended to set off an explosive inside the stadium" - eyewitness <i
+                  class="fa-solid fa-camera"></i></a></li>
+            <li><a href=""> Raúl bids goodbye in style <i class="fa-solid fa-camera"></i> <i
+                  class="fa-brands fa-youtube"></i></a></li>
+            <li><a href=""> Five reasons Belgium vs. Spain was called off </a></li>
+            <li><a href=""> Niggles won't keep Benzema out of 'Clásico'</a></li>
+            <li><a href=""> Abdeslam suspected to have been near King Baudouin Stadium</a></li>
+          </div>
+          <div class="newsfeed">
+            @@include("./partials/title-style/_title-style.html", {
+            "title-text": "Newsfeed",
+            "type": "blue"
+            })
+            @@include("./partials/news-items/_news-item.html", {
+            "news-item-link": "###",
+            "news-item__img": "./img/newsfeed-news-1.png",
+            "news-item-text": "Zlatan Ibrahimovic on target as Sweden qualify with draw in Denmark",
+            "fa-icon": "fa-camera"
+            })
+            <li><a href="">Real Madrid players to gaffer: up and at 'em!</a></li>
+            <li><a href="">Swedes indebted to talismanic Ibrahimovic <i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="">2016 European Championship to go ahead in France</a></li>
+            <li><a href="">Ancelotti: "Premier League return is my no. 1 choice"</a></li>
+          </div>
+        </div>
+        <div class="photo-news">
+          <a class="news-item-link" href="###">
+            <div class="news-item">
+              @@include("./partials/card-camera/_card-camera.html", {
+              "news-item-camera__img": "./img/photo-news1.png"
+              })
+              <p class="news-item__text">Here is how Leage Champions trophy looks like</p>
+            </div>
+          </a>
+          <a class="news-item-link" href="###">
+            <div class="news-item">
+              @@include("./partials/card-camera/_card-camera.html", {
+              "news-item-camera__img": "./img/photo-news-2.png"
+              })
+              <p class="news-item__text">Casillas got some piece of paper</p>
+            </div>
+          </a>
+          <a class="news-item-link" href="###">
+            <div class="news-item">
+              @@include("./partials/card-camera/_card-camera.html", {
+              "news-item-camera__img": "./img/photo-news-3.png"
+              })
+              <p class="news-item__text">Bayern Munich vs Barcelona. Fangirls</p>
+            </div>
+          </a>
         </div>
       </div>
-  
-  <div class="container main-news">
-    @@include("./partials/title-style/_title-style.html", {
-      "title-text": "Main News",
-      "type": "dark"
-    })
-    <div class="main-news__items">
-      @@include("./partials/news-items/_news-item.html", {
-        "news-item-link": "###",
-        "news-item__img": "./img/main-news-1.png",
-        "news-item-text": "The FIFA Ballon d'Or is an annual association football award given by FIFA"
-      })
-      @@include("./partials/news-items/_news-item.html", {
-        "news-item-link": "###",
-        "news-item__img": "./img/main-news-2.png",
-        "news-item-text": "Messi got some balloons"
-      })
-      @@include("./partials/news-items/_news-item.html", {
-        "news-item-link": "###",
-        "news-item__img": "./img/main-news-3.png",
-      "news-item-text": "CR7 also, but not so much"
-    })
-      @@include("./partials/news-items/_news-item.html", {
-        "news-item-link": "###",
-        "news-item__img": "./img/main-news-4.png",
-      "news-item-text": "Ribery got vase! ",
-      "fa-icon": "fa-camera"
-    })
-    </div>
-  </div>
-</header>
-  <div class="container-sub video">
-    @@include("./partials/title-style/_title-style.html", {
-      "title-text": "Видео",
-      "type": "dark"
-    })
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-video/_card-video.html", {
-      "news-item-video__img": "./img/video-news-1.png"
-    })
-        <p class="news-item__text">Фильм дня: Гитлер Капут!</p>
-      </div>
-    </a>
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-video/_card-video.html", {
-      "news-item-video__img": "./img/video-news-2.png"
-    })
-        <p class="news-item__text">Ксения Собчак беременна</p>
-      </div>
-    </a>
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-video/_card-video.html", {
-      "news-item-video__img": "./img/video-news-3.png"
-    })
-        <p class="news-item__text">Группа парней избила влюбленную пару бейсбольной битой</p>
-      </div>
-    </a>
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-video/_card-video.html", {
-      "news-item-video__img": "./img/video-news-4.png"
-    })
-        <p class="news-item__text">Небесные ласточки: двухсерийная музыкальная комедия</p>
-      </div>
-    </a>
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-video/_card-video.html", {
-      "news-item-video__img": "./img/video-news-5.png"
-    })
-        <p class="news-item__text">На дополнительном кастинге 'Хочу в ВИА Гру' девушек просили</p>
-      </div>
-    </a>
-    <p class="more-video">Больше видео <i class="fa-solid fa-arrow-right"></i></i></p> 
-    
+    </section>
 
-  </div>
-</section>
+    <section class="second screen">
+      <div class="container-sub video">
+        @@include("./partials/title-style/_title-style.html", {
+        "title-text": "Видео",
+        "type": "dark"
+        })
+        <a class="news-item-link" href="###">
+          <div class="news-item">
+            @@include("./partials/card-video/_card-video.html", {
+            "news-item-video__img": "./img/video-news-1.png"
+            })
+            <p class="news-item__text">Фильм дня: Гитлер Капут!</p>
+          </div>
+        </a>
+        <a class="news-item-link" href="###">
+          <div class="news-item">
+            @@include("./partials/card-video/_card-video.html", {
+            "news-item-video__img": "./img/video-news-2.png"
+            })
+            <p class="news-item__text">Ксения Собчак беременна</p>
+          </div>
+        </a>
+        <a class="news-item-link" href="###">
+          <div class="news-item">
+            @@include("./partials/card-video/_card-video.html", {
+            "news-item-video__img": "./img/video-news-3.png"
+            })
+            <p class="news-item__text">Группа парней избила влюбленную пару бейсбольной битой</p>
+          </div>
+        </a>
+        <a class="news-item-link" href="###">
+          <div class="news-item">
+            @@include("./partials/card-video/_card-video.html", {
+            "news-item-video__img": "./img/video-news-4.png"
+            })
+            <p class="news-item__text">Небесные ласточки: двухсерийная музыкальная комедия</p>
+          </div>
+        </a>
+        <a class="news-item-link" href="###">
+          <div class="news-item">
+            @@include("./partials/card-video/_card-video.html", {
+            "news-item-video__img": "./img/video-news-5.png"
+            })
+            <p class="news-item__text">На дополнительном кастинге 'Хочу в ВИА Гру' девушек просили</p>
+          </div>
+        </a>
+        <p class="more-video">Больше видео <i class="fa-solid fa-arrow-right"></i></i></p>
 
-<section class="second screen">
-  <div class="container"> 
-  <div class="news">
-    <div class="last-news">
-      @@include("./partials/title-style/_title-style.html", {
-        "title-text": "Last News",
-        "type": "blue"
-      })
-      <li><a href="">Real Madrid players to gaffer: up and at 'em!</a></li>
-      <li><a href="">Swedes indebted to talismanic Ibrahimovic</a></li>
-      <li><a href=""> 2016 European Championship to go ahead in France</a></li>
-      <li><a href=""> Ancelotti: "Premier League return is my no. 1 choice"</a></li>
-      <li><a href=""> Walters double secures Euro 2016 spot for Ireland</a></li>
-      <li><a href="">"They intended to set off an explosive inside the stadium" - eyewitness <i class="fa-solid fa-camera"></i></a></li>
-      <li><a href=""> Raúl bids goodbye in style <i class="fa-solid fa-camera"></i> <i class="fa-brands fa-youtube"></i></a></li>
-      <li><a href=""> Five reasons Belgium vs. Spain was called off </a></li>
-      <li><a href=""> Niggles won't keep Benzema out of 'Clásico'</a></li>
-      <li><a href=""> Abdeslam suspected to have been near King Baudouin Stadium</a></li>
-    </div>
-    <div class="newsfeed">
-      @@include("./partials/title-style/_title-style.html", {
-        "title-text": "Newsfeed",
-        "type": "blue"
-      })
-      @@include("./partials/news-items/_news-item.html", {
+
+      </div>
+
+      <div class="container-sub interesting">
+        @@include("./partials/title-style/_title-style.html", {
+        "title-text": "Интересные статьи",
+        "type": "dark"
+        })
+        @@include("./partials/news-items/_news-item.html", {
         "news-item-link": "###",
-        "news-item__img": "./img/newsfeed-news-1.png",
-        "news-item-text": "Zlatan Ibrahimovic on target as Sweden qualify with draw in Denmark",
-        "fa-icon": "fa-camera"
-      })
-      <li><a href="">Real Madrid players to gaffer: up and at 'em!</a></li>
-      <li><a href="">Swedes indebted to talismanic Ibrahimovic <i class="fa-brands fa-youtube"></i></a></li>
-      <li><a href="">2016 European Championship to go ahead in France</a></li>
-      <li><a href="">Ancelotti: "Premier League return is my no. 1 choice"</a></li>
-    </div>
-  </div>
-  <div class="photo-news">
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-camera/_card-camera.html", {
-          "news-item-camera__img": "./img/photo-news1.png"
+        "news-item__img": "./img/int-news-1.png",
+        "news-item-text": "Испанский политик полностью оделась для глянца",
+        "fa-icon-video": "fa-youtube"
         })
-        <p class="news-item__text">Here is how Leage Champions trophy looks like</p>
-      </div>
-    </a>
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-camera/_card-camera.html", {
-          "news-item-camera__img": "./img/photo-news-2.png"
-        })
-        <p class="news-item__text">Casillas got some piece of paper</p>
-      </div>
-    </a>
-    <a class="news-item-link" href="###">
-      <div class="news-item">
-        @@include("./partials/card-camera/_card-camera.html", {
-          "news-item-camera__img": "./img/photo-news-3.png"
-        })
-        <p class="news-item__text">Bayern Munich vs Barcelona. Fangirls</p>
-      </div>
-    </a>
-</div>
-  </div>  
-  
-  <div class="container-sub interesting">
-    @@include("./partials/title-style/_title-style.html", {
-      "title-text": "Интересные статьи",
-      "type": "dark"
-    })
-    @@include("./partials/news-items/_news-item.html", {
-      "news-item-link": "###",
-      "news-item__img": "./img/int-news-1.png",
-      "news-item-text": "Испанский политик полностью оделась для глянца",
-      "fa-icon-video": "fa-youtube"
-    })
-    @@include("./partials/news-items/_news-item.html", {
-      "news-item-link": "###",
+        @@include("./partials/news-items/_news-item.html", {
+        "news-item-link": "###",
         "news-item__img": "./img/int-news-2.png",
         "news-item-text": "Анджелина Джоли сильно похудела",
         "fa-icon": "fa-camera"
-      })
-    @@include("./partials/news-items/_news-item.html", {
-      "news-item-link": "###",
-          "news-item__img": "./img/int-news-3.png",
-          "news-item-text": "Исполнить мечту и умереть: История 14-летней девочки..."
         })
-    @@include("./partials/news-items/_news-item.html", {
-      "news-item-link": "###",
-            "news-item__img": "./img/int-news-4.png",
-            "news-item-text": "Ирина Билык сказала, что думает о повзрослевшей Алине..."
-    })
-    @@include("./partials/news-items/_news-item.html", {
-      "news-item-link": "###",
-      "news-item__img": "./img/int-nes-5.png",
-      "news-item-text": " 7 'смертных грехов': чего нельзя делать в отношениях"
-})
-</div>
-</section>
-
-  <footer>
+        @@include("./partials/news-items/_news-item.html", {
+        "news-item-link": "###",
+        "news-item__img": "./img/int-news-3.png",
+        "news-item-text": "Исполнить мечту и умереть: История 14-летней девочки..."
+        })
+        @@include("./partials/news-items/_news-item.html", {
+        "news-item-link": "###",
+        "news-item__img": "./img/int-news-4.png",
+        "news-item-text": "Ирина Билык сказала, что думает о повзрослевшей Алине..."
+        })
+        @@include("./partials/news-items/_news-item.html", {
+        "news-item-link": "###",
+        "news-item__img": "./img/int-nes-5.png",
+        "news-item-text": " 7 'смертных грехов': чего нельзя делать в отношениях"
+        })
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
     @@include("./partials/title-style/_title-style.html", {
-      "title-text": "Обзор",
-      "type": "dark"
+    "title-text": "Обзор",
+    "type": "dark"
     })
-    <div class="review">
-      <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="21px" height="40px">
-<path fill-rule="evenodd"  fill="rgb(199, 0, 0)"
- d="M8.143,20.0 L20.749,32.610 L20.749,40.5 L0.750,20.0 L20.749,0.6 L20.749,7.389 L8.143,20.0 Z"/>
-</svg>
+
+    <div class="review slick-slider">
+
       <div class="review-item">
-      <h4>Знакомства</h4>
-      @@include("./partials/news-items/_news-item.html", {
+        <h4>Знакомства</h4>
+        @@include("./partials/news-items/_news-item.html", {
         "news-item-link": "###",
         "news-item__img": "./img/review-news-1.png",
         "news-item-text": " 7 'смертных грехов': чего нельзя делать в отношениях"
-      })
-    </div>
+        })
+      </div>
 
-    <div class="review-item">
-      <h4>Знакомства</h4>
-      @@include("./partials/news-items/_news-item.html", {
+      <div class="review-item">
+        <h4>Знакомства</h4>
+        @@include("./partials/news-items/_news-item.html", {
         "news-item-link": "###",
         "news-item__img": "./img/review-news-2.png",
         "news-item-text": "Отношения актеров в кино и в реальной жизни"
-      })
-    </div> 
+        })
+      </div>
 
-    <div class="review-item">
-      <h4>Знакомства</h4>
-      @@include("./partials/news-items/_news-item.html", {
+      <div class="review-item">
+        <h4>Знакомства</h4>
+        @@include("./partials/news-items/_news-item.html", {
         "news-item-link": "###",
         "news-item__img": "./img/review-news-3.png",
         "news-item-text": "Отношения актеров в кино и в реальной жизни"
-      })
-    </div>
+        })
+      </div>
 
-    <div class="review-item">
-      <h4>Приколы</h4>
-      @@include("./partials/news-items/_news-item.html", {
+      <div class="review-item">
+        <h4>Приколы</h4>
+        @@include("./partials/news-items/_news-item.html", {
         "news-item-link": "###",
         "news-item__img": "./img/review-news-4.png",
         "news-item-text": "Отношения актеров в кино и в реальной жизни"
-      })
-    </div>
+        })
+      </div>
 
-    <div class="review-item">
-      <h4>Авто</h4>
-      @@include("./partials/news-items/_news-item.html", {
+      <div class="review-item">
+        <h4>Авто</h4>
+        @@include("./partials/news-items/_news-item.html", {
         "news-item-link": "###",
         "news-item__img": "./img/review-news-5.png",
         "news-item-text": "Отношения актеров в кино и в реальной жизни"
-      })
-    </div>
-    <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="21px" height="40px">
-<path fill-rule="evenodd"  fill="rgb(199, 0, 0)"
- d="M0.750,40.5 L0.750,32.610 L13.356,20.0 L0.750,7.389 L0.750,0.6 L20.749,20.0 L0.750,40.5 Z"/>
-</svg>
+        })
+      </div>
+      <div class="review-item">
+        <h4>Знакомства</h4>
+        @@include("./partials/news-items/_news-item.html", {
+        "news-item-link": "###",
+        "news-item__img": "./img/review-news-3.png",
+        "news-item-text": "Отношения актеров в кино и в реальной жизни"
+        })
+      </div>
 
+      <div class="review-item">
+        <h4>Авто</h4>
+        @@include("./partials/news-items/_news-item.html", {
+        "news-item-link": "###",
+        "news-item__img": "./img/review-news-5.png",
+        "news-item-text": "Отношения актеров в кино и в реальной жизни"
+        })
+      </div>
     </div>
   </footer>
 </body>
+
 
 </html>
