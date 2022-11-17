@@ -1,0 +1,13 @@
+.featured-card-list {
+    padding-left: 20px;
+  }
+  
+  .featured-card-list li {
+    list-style-type: "➔";
+    color: var(--cta-color);
+  
+    & p {
+      color: var(--font-color);
+      padding-left: 10px;
+    }
+  }
