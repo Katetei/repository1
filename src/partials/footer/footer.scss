@@ -1,0 +1,153 @@
+.footer {
+    background: var(--footer-color);
+  
+    & .container {
+      display: flex;
+    flex-direction: column;
+    padding: 40px 0; }
+   }
+  
+   .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+  
+   }
+  
+   .title-subscribe {
+    color: var(--font-color-white);
+    font-size: 24px;
+    font-weight: 500;
+   }
+  
+   .text-subscribe {
+    color: var(--font-color-white);
+    font-size: 18px;
+    font-weight: 300;
+   }
+   
+   
+   .subscribe-form__input {
+    color: var(--font-color-white);
+   }
+  
+   .btn-subscribe {
+    color: var(--cta-color);
+    border: 1px solid var(--cta-color);
+    border-radius: 100px;
+    padding: 5px 20px;
+    width: fit-content;
+
+    &:hover {
+        color: var(--font-color-white);
+        border: 1px solid var(--font-color-white);
+    }
+   }
+  
+   .inputs {
+   display: flex;
+   margin: 40px 0 30px;
+   
+   & input {
+      background: none;
+      border: none;
+      color: inherit;
+      font-size: inherit;
+      outline: none;
+      border-bottom: 1px solid var(--cta-color);
+   }
+  }
+  
+   .subscribe {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+   }
+
+  
+  
+   .footer-links {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+  
+    & .navigation, .link, .resources {
+      display: flex;
+      flex-direction: column;
+    }
+   }
+   .footer-links__title {
+    font-weight: 500;
+    color: var(--font-color-white);
+    margin-bottom: 20px;
+   }
+  
+   .footer-links__link {
+    color: var(--font-color-white);
+    line-height: 200%;
+  
+    &:hover {
+      color: var(--cta-color);
+    }
+   }
+  
+   .footer-icons {
+    display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 30px 30px 0;
+  
+   }
+  
+   .footer-icons svg path:hover {
+    fill: var(--font-color-white);
+   }
+  
+
+   @media (max-width: 1212px) {
+  
+    }
+  
+ 
+  
+   @media (max-width: 1200px) {
+    
+   }
+  
+   @media (max-width: 1070px) {
+    
+   }
+  
+  
+   @media (max-width: 986px) {
+    .inputs {
+      flex-direction: column;
+      gap: 30px;
+    }
+   }
+  
+   @media (max-width: 876px) {
+   .footer-links, .subscribe {
+    font-size: 0.9rem;
+   }
+   }
+
+  
+  
+   @media (max-width: 586px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .inputs {
+      flex-direction: row;
+    }
+  
+   }
+   @media (max-width: 420px) {
+    
+   }
+
+  

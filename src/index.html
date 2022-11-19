@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./fonts/Playball-Regular.ttf">
   <link rel="stylesheet" href="./main.scss">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
   <title>Project</title>
   <script src="./js/main.js" defer></script>
 </head>
 
 <body>
   <header class="header container">
-   <a href="" class="logo-link"> <img src="./img/Logo.png" alt="logo" class="logo">
-   </a>
+    <a href="" class="logo-link"> <img src="./img/Logo.png" alt="logo" class="logo">
+    </a>
     <nav class="header__items">
       <a href="" class="btn">
         <div class="btn-arrow cta">
@@ -52,28 +56,33 @@
           <p class="intro-grid-item-text">Public Chains Covered</p>
         </div>
       </div>
-      <div class="intro-info-buttons"> 
-      <a href="" class="btn">
-        <div class="btn-arrow cta">
-          <p class="btn__cta-title">Get Covered</p>
-          <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
-        </div>
-      </a>
-      <a href="" class="btn-plain">
-        Get Covered
-      </a>
-      <a href="" class="btn-plain">
-        Get $INSUR
-      </a>
+      <div class="intro-info-buttons">
+        <a href="" class="btn">
+          <div class="btn-arrow cta">
+            <p class="btn__cta-title">Get Covered</p>
+            <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
+          </div>
+        </a>
+        <a href="">
+          <div class="btn-plain"> Get Covered</div>
+        </a>
+        <a href="">
+          <div class="btn-plain"> Get $INSUR</div>
+        </a>
+      </div>
     </div>
-</div>
-<div class="intro-slider">
-  <img class="intro-slider-img" src="./img/security-main-screen.jpg" alt="">
-</div>
+
+    <div class="intro-slider">
+      <div> <img class="intro-slider-img" src="./img/security-main-screen.jpg" alt=""> </div>
+      <div> <img class="intro-slider-img" src="./img/security-main-screen-2.jpg" alt=""> </div>
+      <div> <img class="intro-slider-img" src="./img/security-main-screen-3.jpg" alt=""> </div>
+      <div> <img class="intro-slider-img" src="./img/security-main-screen-4.jpg" alt=""> </div>
+
+    </div>
   </section>
-  <section class="feautured container"> 
+  <section class="feautured container">
     <div class="featured__card assets">
-  <!-- @@include("./partials/home-page-feautured-items/_feautured-item.html", {
+      <!-- @@include("./partials/home-page-feautured-items/_feautured-item.html", {
     "title-text": "Keep Assets",
     "title-text-it": "Secure",
     "featured-card-text": "We provide reliable, robust, and secure protection services to DeFi users, allowing them to secure investment assets against various risks.",
@@ -83,275 +92,224 @@
     "list-4": "Stablecoin Depeg Risk",
     "btn-text": "Get Covered"
     }) -->
-    <div class="featured__card-item"> 
-      <h2 class="title-h2">Keep Assets <span class="title-h2-it">Secure</span></h2>
-      <p class="featured-card-text">
-        We provide reliable, robust, and secure protection services to DeFi users, allowing them to secure investment assets against various risks.
-      </p>
-      <ul class="featured-card-list">
-        <li><p>Smart Contract Vulnerability</p></li>  
-        <li><p>Custodian Risk</p></li>
-        <li><p>IDO Event Risk</p></li>
-        <li><p>Stablecoin Depeg Risk</p></li>
-      </ul>
-      <a href="" class="btn">
-        <div class="btn-arrow btn-plain">
-          <p class="btn__cta-title">Get Covered</p>
-          <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
-        </div>
-      </a>
+      <div class="featured__card-item">
+        <h2 class="title-h2">Keep Assets <span class="title-h2-it">Secure</span></h2>
+        <p class="featured-card-text">
+          We provide reliable, robust, and secure protection services to DeFi users, allowing them to secure investment
+          assets against various risks.
+        </p>
+        <ul class="featured-card-list">
+          <li>
+            <p>Smart Contract Vulnerability</p>
+          </li>
+          <li>
+            <p>Custodian Risk</p>
+          </li>
+          <li>
+            <p>IDO Event Risk</p>
+          </li>
+          <li>
+            <p>Stablecoin Depeg Risk</p>
+          </li>
+        </ul>
+        <a href="" class="btn">
+          <div class="btn-arrow btn-plain">
+            <p class="btn__cta-title">Get Covered</p>
+            <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
+          </div>
+        </a>
       </div>
       <img class="featured-card-img" src="../img/screen-1.png" alt="">
-  </div>
-  <div class="featured__card earn">
-    <div class="featured__card-item"> 
-    <h2 class="title-h2">Stake to <span class="title-h2-it
-      ">Earn</span></h2>
-  <p class="featured-card-text">
-    We reward users who provide capital to underwrite risks in the underwriting pool with $INSUR tokens.
-  </p>
-  <a href="" class="btn">
-    <div class="btn-arrow btn-plain">
-      <p class="btn__cta-title">Start Mining</p>
-      <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
     </div>
-  </a>
-  </div>
-  <img class="featured-card-img" src="../img/screen-2.png" alt="">
-</div>
+    <div class="featured__card earn">
+      <div class="featured__card-item">
+        <h2 class="title-h2">Stake to <span class="title-h2-it
+      ">Earn</span></h2>
+        <p class="featured-card-text">
+          We reward users who provide capital to underwrite risks in the underwriting pool with $INSUR tokens.
+        </p>
+        <a href="" class="btn">
+          <div class="btn-arrow btn-plain">
+            <p class="btn__cta-title">Start Mining</p>
+            <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
+          </div>
+        </a>
+      </div>
+      <img class="featured-card-img" src="../img/screen-2.png" alt="">
+    </div>
     </div>
     <div class="featured__card returns">
-      <div class="featured__card-item"> 
+      <div class="featured__card-item">
         <h2 class="title-h2">Gain Investment <span class="title-h2-it
           ">Returns</span></h2>
-      <p class="featured-card-text">
-        We offer investment services to generate sustainable returns for investors who invest directly via the Investment Portal.
-      </p>
+        <p class="featured-card-text">
+          We offer investment services to generate sustainable returns for investors who invest directly via the
+          Investment Portal.
+        </p>
       </div>
       <img class="featured-card-img" src="../img/screen-3.png" alt="">
     </div>
-      </div>
+    </div>
   </section>
   <section class="faq container">
-    <div class="faq__item">
-      <input id="toggler-open" type="radio"  name="toggler" checked="checked">
-      <label for="toggler-open" class="faq__title">
-          Easier Access
-      </label>
-      <p class="faq__item__content">Our platform is deployed across multiple chains, providing maximum flexibility for user access.
-      </p>    
-    </div>
-    <div class="faq__item">
-      <input id="toggler-open-2" type="radio" name="toggler">
-      <label for="toggler-open-2" class="faq__title">
-          Broader Coverage
-      </label>
-      <p class="faq__item__content">We have build a full-spectrum cross-chain product line, providing coverage to 12 chains and expanding to moer constantly. We offer protections against smart contract vulnerability, custodian risk, IDO event risk and stablecoin de-peg risk currently. More products will be offered upcoming, such as NFT protection, cross-chain bridge cover, etc.
-      </p>
-    </div>
-    <div class="faq__item">
-      <input id="toggler-open-3" type="radio" name="toggler">
-      <label for="toggler-open-3" class="faq__title">
-        Lower Cost
-      </label>
-      <p class="faq__item__content">We offer portfolio-based and bundled covers with unique pricing strategies, which help to save up to 60% on cover payments and 50% on gas fees. Such an approach allows users to insure all of their DeFi assets in one stop, rather than through multiple protocols and multiple transactions.
-      </p>
-    </div>
-    <div class="faq__item">
-      <input id="toggler-open-4" type="radio" name="toggler">
-      <label for="toggler-open-4" class="faq__title">
-        Fair & Transparent Governance
-      </label>
-      <p class="faq__item__content">All activities and transactions are on-chain with data published and visualized within the application. The claim process is uniquely designed to align the interests of stakeholders, ensuring a fair and transparent claim process to protect the policy holders.
-      </p>
-    </div>
-    <div class="faq__item">
-      <input id="toggler-open-5" type="radio" name="toggler">
-      <label for="toggler-open-5" class="faq__title">
-        Sustainable Returns
-        </label>
-      <p class="faq__item__content">Our platform is designed to generate competitive and sustainable returns and accrue to the users and token holders.
-      </p>
-    </div>
+    @@include("./partials/faq-item/_faq-item.html", {
+    "id-toggler-open": "toggler-open",
+    "for-toggler-open": "toggler-open",
+    "faq__title-text": "Easier Access",
+    "faq__item__content": "Our platform is deployed across multiple chains, providing maximum flexibility for user
+    access.",
+    })
+    @@include("./partials/faq-item/_faq-item.html", {
+    "id-toggler-open": "toggler-open-1",
+    "for-toggler-open": "toggler-open-1",
+    "faq__title-text": "Broader Coverage",
+    "faq__item__content": "We have build a full-spectrum cross-chain product line, providing coverage to 12 chains and
+    expanding to moer constantly. We offer protections against smart contract vulnerability, custodian risk, IDO event
+    risk and stablecoin de-peg risk currently. More products will be offered upcoming, such as NFT protection,
+    cross-chain bridge cover, etc.",
+    })
+    @@include("./partials/faq-item/_faq-item.html", {
+    "id-toggler-open": "toggler-open-2",
+    "for-toggler-open": "toggler-open-2",
+    "faq__title-text": "Lower Cost",
+    "faq__item__content": "We offer portfolio-based and bundled covers with unique pricing strategies, which help to
+    save up to 60% on cover payments and 50% on gas fees. Such an approach allows users to insure all of their DeFi
+    assets in one stop, rather than through multiple protocols and multiple transactions.",
+    })
+    @@include("./partials/faq-item/_faq-item.html", {
+    "id-toggler-open": "toggler-open-3",
+    "for-toggler-open": "toggler-open-3",
+    "faq__title-text": "Fair & Transparent Governance",
+    "faq__item__content": "All activities and transactions are on-chain with data published and visualized within the
+    application. The claim process is uniquely designed to align the interests of stakeholders, ensuring a fair and
+    transparent claim process to protect the policy holders.",
+    })
+    @@include("./partials/faq-item/_faq-item.html", {
+    "id-toggler-open": "toggler-open-4",
+    "for-toggler-open": "toggler-open-4",
+    "faq__title-text": "Sustainable Returns",
+    "faq__item__content": "Our platform is designed to generate competitive and sustainable returns and accrue to the
+    users and token holders.",
+    })
   </section>
   <section class="feautured container">
     <div class="featured__card earn">
-      <div class="featured__card-item"> 
-      <h2 class="title-h2 cta-text">$INSUR</h2>
-      <h2 class="title-h2">Governance Token of InsurAce.io</h2>
-    <p class="featured-card-text">
-      Listed on <span class="cta-text">6</span> exchanges across <span class="cta-text">4</span> chains with data available on <span class="cta-text">14</span> platforms.
-    </p>
-    <a href="" class="btn">
-      <div class="btn-arrow btn-plain">
-        <p class="btn__cta-title">Get $INSUR</p>
-        <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
+      <div class="featured__card-item">
+        <h2 class="title-h2 cta-text">$INSUR</h2>
+        <h2 class="title-h2">Governance Token of InsurAce.io</h2>
+        <p class="featured-card-text">
+          Listed on <span class="cta-text">6</span> exchanges across <span class="cta-text">4</span> chains with data
+          available on <span class="cta-text">14</span> platforms.
+        </p>
+        <a href="" class="btn">
+          <div class="btn-arrow btn-plain">
+            <p class="btn__cta-title">Get $INSUR</p>
+            <img class="btn__cta-arrow" src="./img/arrow.svg" alt="btn-arrow">
+          </div>
+        </a>
       </div>
-    </a>
+      <img class="featured-card-img" src="../img/screen-4.png" alt="">
     </div>
-    <img class="featured-card-img" src="../img/screen-4.png" alt="">
-  </div>
   </section>
 
-<section class="support-tabs container">
-  <div class="tab investors">
-   <input type="radio" id="investors-tab" name="tab-group" checked>
-   <label for="investors-tab" class="tab-title">Investors</label> 
-   <div class="tab-content">
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-      "partner-name": "DeFiance Capital",
-    }) 
-   </div>
-  </div> 
-  <div class="tab partners">
-   <input type="radio" id="partners-tab" name="tab-group">
-   <label for="partners-tab" class="tab-title">Partners</label> 
-   <div class="tab-content">
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/Aldrin.svg",
-      "partner-name": "Aldrin",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/Beefy.svg",
-      "partner-name": "Beefy Finance",
-    }) 
-   </div>
-  </div>
-  <div class="tab feauturedin">
-    <input type="radio" id="feauturedin-tab" name="tab-group">
-    <label for="feauturedin-tab" class="tab-title">Feautured In</label> 
-   <div class="tab-content"> 
-    
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/Bitcoinist.svg",
-      "partner-name": "Bitcoinist",
-    }) 
-    @@include("./partials/partner-item/_partner-item.html", {
-      "partner-icon": "../img/partners-logo/Bloomberg.svg",
-      "partner-name": "Bloomberg",
-    }) 
-
-   </div> 
-  </div> 
-</section>  
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-    <div class="suscribe">
-    <h5 class="title-subscribe">Keep Updated!</h5>
-    <p class="text-suscribe">Sign up to our newsletter for updates.</p>
-    <form action="get" class="subscribe-form">
-      <div class="inputs">
-        <label for="name" class="subscribe-form__input">
-          Name:
-        </label>
-        <input type="text" id="name" class="input-style" placeholder="John Smith">
-        <label for="email" class="subscribe-form__input">
-          Email:
-        </label>
-        <input type="text" id="email" class="input-style" placeholder="your@email.com">
+  <section class="support-tabs container">
+    <div class="tab investors">
+      <input type="radio" id="investors-tab" name="tab-group" checked>
+      <label for="investors-tab" class="tab-title">Investors</label>
+      <div class="tab-content">
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
+        "partner-name": "DeFiance Capital",
+        })
       </div>
-      <a class="btn-suscribe-link" href=""><div class="btn-suscribe">Subscribe</div>
-      </a>
-    </form>
-  </div>
-  <div class="footer-links">
-    <div class="navigation">
-      <a href="" class="footer-links__title">Navigation</a>
-      <a href="" class="footer-links__link">Team</p>
-      <a href="" class="footer-links__link">Careers</a>
     </div>
-    <a href=""></a>
-    <div class="link">
-      <a href="" class="footer-links__title">Link</a>
-      <a href="" class="footer-links__link">App</a>
-      <a href="" class="footer-links__link">Refer & Earn</a>
-      <a href="" class="footer-links__link">Get $INSUR</a>
-      <a href="" class="footer-links__link">Get Listed</a>
-      <a href="" class="footer-links__link">Brand Assets</a>
+    <div class="tab partners">
+      <input type="radio" id="partners-tab" name="tab-group">
+      <label for="partners-tab" class="tab-title">Partners</label>
+      <div class="tab-content">
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/Aldrin.svg",
+        "partner-name": "Aldrin",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/Beefy.svg",
+        "partner-name": "Beefy Finance",
+        })
+      </div>
     </div>
-    <div href="" class="resources">
-      <a href="" class="footer-links__title">Linktree</a>
-      <a href="" class="footer-links__link">Docs</a>
-      <a href="" class="footer-links__link">User Guide</a>
-      <a href="" class="footer-links__link">Whitepaper</a>
-      <a href="" class="footer-links__link">Audit report</a>
-      <a href="" class="footer-links__link">Terms of Use</a>
-      <a href="" class="footer-links__link">Privacy Policy</a>
+    <div class="tab feauturedin">
+      <input type="radio" id="feauturedin-tab" name="tab-group">
+      <label for="feauturedin-tab" class="tab-title">Feautured In</label>
+      <div class="tab-content">
+
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/Bitcoinist.svg",
+        "partner-name": "Bitcoinist",
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/Bloomberg.svg",
+        "partner-name": "Bloomberg",
+        })
+
+      </div>
     </div>
-  </div>
-</div>
-  <div class="footer-icons">
-    <a href="" class="footer-icons__link"><svg class="twitter-icon" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M14 0C6.267 0 0 6.267 0 14s6.267 14 14 14 14-6.267 14-14S21.733 0 14 0zm7.12 11.317c-.079 5.976-3.9 10.07-9.604 10.326-2.353.108-4.057-.652-5.54-1.594 1.738.277 3.894-.418 5.047-1.405-1.704-.166-2.713-1.033-3.185-2.43a3.978 3.978 0 001.48-.036c-1.539-.514-2.637-1.465-2.694-3.457.432.197.882.381 1.48.418-1.152-.655-2.003-3.048-1.028-4.63 1.708 1.872 3.763 3.4 7.137 3.606-.847-3.62 3.951-5.584 5.96-3.15.848-.165 1.54-.487 2.204-.837-.274.84-.8 1.428-1.443 1.898.705-.095 1.33-.267 1.862-.53-.33.686-1.053 1.302-1.675 1.821z" fill="#1DB371" fill-rule="evenodd"/></svg>
-    </a>
-    <a href="" class="footer-icons__link"><svg class="telegram-icon" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M13.993.014C6.263.014 0 6.27 0 13.99s6.263 13.976 13.993 13.976 13.993-6.255 13.993-13.976c0-7.72-6.263-13.975-13.993-13.975zm6.872 9.574L18.57 20.397c-.17.766-.626.952-1.264.591l-3.498-2.575-1.687 1.623c-.187.186-.344.344-.706.344l.249-3.556 6.483-5.85c.282-.247-.062-.388-.435-.14L9.7 15.872l-3.453-1.077c-.75-.236-.767-.75.158-1.11l13.49-5.196c.627-.225 1.174.153.971 1.1z" fill="#1DB371" fill-rule="evenodd"/></svg>
-    </a>
-    <a href="" class="footer-icons__link"><svg class="discord-icon" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.017C0 6.291 6.257.034 13.983.034c7.726 0 13.983 6.257 13.983 13.983C27.966 21.743 21.709 28 13.983 28 6.257 28 0 21.743 0 14.017zm21.243-5.17c-2.19-1.793-4.379-1.595-4.379-1.595l-.198.197c2.684.692 4.082 1.992 4.082 1.992-2.189-1.3-4.971-1.497-6.073-1.497h-.593c-1.2 0-3.983.296-6.074 1.497 0 0 1.399-1.3 4.082-1.992l-.197-.197s-2.19-.1-4.379 1.596c0 0-2.387 4.28-2.19 8.954 0 0 1.498 2.289 4.775 2.289l.988-1.3s-1.892-.593-2.683-1.794c0 0 2.288 1.596 5.777 1.695h.593c3.489-.198 5.777-1.695 5.777-1.695-.791 1.2-2.684 1.794-2.684 1.794l.989 1.3c3.277-.1 4.774-2.289 4.774-2.289 0-4.675-2.387-8.954-2.387-8.954zm-9.746 7.571c-.89 0-1.596-.79-1.596-1.695 0-.89.692-1.695 1.596-1.695.89 0 1.596.791 1.596 1.695s-.706 1.695-1.596 1.695zm5.664 0c-.89 0-1.596-.79-1.596-1.695 0-.89.692-1.695 1.596-1.695.89 0 1.596.791 1.596 1.695.099.89-.692 1.695-1.596 1.695z" fill="#1DB371" fill-rule="evenodd"/></svg>
-    </a>
-    <a href="" class="footer-icons__link"><svg class="blog-icon" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M13.99 0c7.725 0 13.991 6.263 13.991 13.99 0 7.728-6.263 13.991-13.99 13.991C6.263 27.981 0 21.718 0 13.991 0 6.263 6.266 0 13.99 0zm6.885 6.481H7.125a.627.627 0 00-.625.625v13.75c0 .344.281.625.625.625h13.75a.627.627 0 00.625-.625V7.106a.627.627 0 00-.625-.625zM14 17.731H9v-3.75h5v3.75zm5 0h-3.75v-1.25H19v1.25zm0-2.5h-3.75v-1.25H19v1.25zm0-2.5H9v-2.5h10v2.5z" fill="#1DB371" fill-rule="nonzero"/></svg>
-    </a>
-    <a href="" class="footer-icons__link"><svg class="email-icon" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M13.986.027C6.262.027 0 6.29 0 14.014 0 21.738 6.262 28 13.986 28c7.725 0 13.987-6.262 13.987-13.986A13.959 13.959 0 0013.986.027zM6.282 8.403h15.41a.154.154 0 01.127.042l-7.83 6.527-7.83-6.527c.042 0 .083-.042.126-.042h-.003zm-.71 10.51v-9.79c0-.084.041-.126.041-.21l5.527 4.607-5.527 5.568c0-.042-.042-.125-.042-.167v-.007zm16.12.712H6.283a.251.251 0 01-.168-.043l5.611-5.61 2.052 1.718c.083.042.125.084.21.084a.319.319 0 00.21-.084l2.05-1.718 5.611 5.61c-.042 0-.126.043-.167.043h.002zm.712-.711a.252.252 0 01-.042.167l-5.57-5.569 5.528-4.606a.378.378 0 01.042.21v9.79l.042.008z" fill="#1DB371" fill-rule="evenodd"/></svg>
-    </a>
-  </div>
-  </div>
-</div>
-</footer>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      @@include("./partials/footer/_footer.html")
+  </footer>
 </body>
+
 </html>
-
-
-
-
