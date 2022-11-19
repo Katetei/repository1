@@ -217,12 +217,11 @@ a {
   padding-top: 20px;
 }
 
-.tab,
-.tab-title {
+.tabs {
   display: inline-block;
 }
 
-.tab input[type="radio"] {
+.tabs input  {
   display: none;
 }
 
@@ -232,20 +231,31 @@ a {
   cursor: pointer;
 }
 
-.tab-content {
-  //position: absolute; 
+.tab-content1, .tab-content2, .tab-content3 {
   padding: 40px 30px;
   left: 0;
   max-width: 1140px;
   display: none;
 }
 
-.tab :checked+.tab-title {
+.tabs :checked + .tab-title {
   position: relative;
   color: var(--cta-color);
 }
 
-.tab :checked~.tab-content {
+.investors-tab:checked ~ .tab-content-items .tab-content1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.partners-tab:checked ~ .tab-content-items .tab-content2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.feauturedin-tab:checked ~ .tab-content-items .tab-content3 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px;
