@@ -209,6 +209,7 @@ h1, h2, h3, h4, h5, h6, p, li, ol, ul a {
   padding: 8px 30px 16px;
 }
 
+
 .support-tabs {
   position: relative;
   text-align: center;
@@ -222,22 +223,21 @@ h1, h2, h3, h4, h5, h6, p, li, ol, ul a {
  .tab input[type="radio"] { display: none; }
  .tab-title {
   font-size: 32px;
-  padding: 5px 10px; /* Поля вокруг текста */
+  padding: 5px 10px;
   cursor: pointer;
  }
 
  .tab-content {
-  position: absolute; /* Абсолютное позиционирование */
-  padding: 40px 30px; /* Поля вокруг текста */
-  left: 0; /* Размещаем у левого края */
-  width: calc(100% - 20px); /* Ширина содержимого */
-  display: none; /* Прячем вкладку */
+// position: absolute; 
+  padding: 40px 30px; 
+  left: 0; 
+  width: calc(100% - 30px);
+  display: none; 
  }
 
- .tab :checked + .tab-title {
-  position: relative; /* Относительное позиционирование */
+ .tab :checked + .tab-title  {
+  position: relative; 
   color: var(--cta-color);
-  top: 1px; /* Сдвигаем вниз */
  }
 
  .tab :checked ~ .tab-content {
@@ -246,8 +246,10 @@ h1, h2, h3, h4, h5, h6, p, li, ol, ul a {
     gap: 10px;  
  }
 
+
  .footer {
   background: var(--footer-color);
+
 
   & .container {
     display: flex;
@@ -338,6 +340,12 @@ h1, h2, h3, h4, h5, h6, p, li, ol, ul a {
 
  .footer-icons svg path:hover {
   fill: var(--font-color-white);
+ }
+
+ @media (max-width: 1212px) {
+  .featured__card {
+    flex-direction: column;
+  }
  }
 
  @media (max-width: 1200px) {
