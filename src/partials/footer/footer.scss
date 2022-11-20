@@ -65,8 +65,6 @@
     padding-right: 30px;
    }
 
-  
-  
    .footer-links {
     display: flex;
     align-items: flex-start;
@@ -104,23 +102,14 @@
    .footer-icons svg path:hover {
     fill: var(--font-color-white);
    }
-  
 
    @media (max-width: 1212px) {
-  
-    }
-  
- 
-  
+  }
    @media (max-width: 1200px) {
-    
-   }
+     }
   
    @media (max-width: 1070px) {
-    
    }
-  
-  
    @media (max-width: 986px) {
     .inputs {
       flex-direction: column;
@@ -134,18 +123,13 @@
    }
    }
 
-  
-  
    @media (max-width: 586px) {
     .footer-content {
       flex-direction: column;
       gap: 30px;
     }
-    .inputs {
-      flex-direction: row;
-    }
-  
    }
+
    @media (max-width: 420px) {
     
    }

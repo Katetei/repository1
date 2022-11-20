@@ -79,6 +79,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  position: relative;
 }
 
 .logo {
@@ -92,13 +93,50 @@ a {
   gap: 20px;
 }
 
-.header__items a {
+.header__items a, .burger-menu a {
   text-decoration: none;
   color: var(--font-color);
 
   &:hover {
     color: var(--cta-color);
   }
+}
+
+.burger {
+  background: var(--cta-color);
+  width: 30px;
+	height: 30px;
+  border-radius: 100px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+  display: none;
+}
+
+.burger-item {
+  width: 20px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--font-color-white);
+	transition: all 0.5s;
+}
+.burger div:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.burger div:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+.burger-menu {
+  display: none;
+  background: var(--font-color-white);
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .intro {
@@ -122,6 +160,41 @@ a {
   & a {
     text-decoration: none;
   }
+}
+
+.intro-slider {
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.intro-slider-img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.slick-next, .slick-prev {
+font-size: 0;
+border: none;
+background-color: transparent;
+display: flex;
+}
+
+.slick-next::before {
+    content: url(../img/arrow.svg);
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: var(--cta-color);
+    border-radius: 100px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background: #fff;
+    }
 }
 
 .featured__card {
@@ -277,7 +350,9 @@ a {
 }
 
 @media (max-width: 1200px) {
-  .tab :checked~.tab-content {
+  .investors-tab:checked ~ .tab-content-items .tab-content1,
+  .partners-tab:checked ~ .tab-content-items .tab-content2,
+  .feauturedin-tab:checked ~ .tab-content-items .tab-content3 {
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -289,14 +364,26 @@ a {
 }
 
 @media (max-width: 986px) {
-  .tab :checked~.tab-content {
+  .investors-tab:checked ~ .tab-content-items .tab-content1,
+  .partners-tab:checked ~ .tab-content-items .tab-content2,
+  .feauturedin-tab:checked ~ .tab-content-items .tab-content3 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 876px) {
-  .tab :checked~.tab-content {
+  .investors-tab:checked ~ .tab-content-items .tab-content1,
+  .partners-tab:checked ~ .tab-content-items .tab-content2,
+  .feauturedin-tab:checked ~ .tab-content-items .tab-content3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 }
 
@@ -317,34 +404,60 @@ a {
     font-size: 24px;
   }
 
-  .tab :checked~.tab-content {
+  .tab-title {
+    font-size: 24px;
+  }
+
+  .investors-tab:checked ~ .tab-content-items .tab-content1,
+  .partners-tab:checked ~ .tab-content-items .tab-content2,
+  .feauturedin-tab:checked ~ .tab-content-items .tab-content3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 420px) {
-  .tab :checked~.tab-content {
+  .investors-tab:checked ~ .tab-content-items .tab-content1,
+  .partners-tab:checked ~ .tab-content-items .tab-content2,
+  .feauturedin-tab:checked ~ .tab-content-items .tab-content3 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-//header
-@media (max-width: 700px) {
+//burger
+
+@media (max-width: 420px) {
   .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    flex-direction: row;
   }
+  .header__items {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transform: translateY(-80%);
+    transition: transform 0.5s; 
+  }
+
+  .burger-menu.active {
+    transform: translateY(70%);
 }
-
-
-//slider
-.intro-slider {
-  max-width: 600px;
-  width: 100%;
+.burger.active div:nth-of-type(1) {
+  display: none;
 }
-
-.intro-slider-img {
-  max-width: 600px;
-  width: 100%;
+.burger.active div:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+.burger.active div:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
 }
