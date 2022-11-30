@@ -18,7 +18,8 @@
 </head>
 
 <body>
-  <header class="header container">
+  <header class="header">
+    <div class="container">
     <a href="" class="logo-link"> <img src="./img/Logo.png" alt="logo" class="logo">
     </a>
     <!-- burger closed -->
@@ -31,7 +32,7 @@
      <nav class="burger-menu">
       <a href="#">Docs</a>
       <a href="#">Get Listed</a>
-      <a href="#">Blog</a>
+      <a href="http://localhost:9000/blog-template.html">Blog</a>
       <a href="" class="btn">
           <div class="btn-arrow cta">
             <p class="btn__cta-title">WebApp</p>
@@ -50,6 +51,7 @@
       <a href="">Get Listed</a>
       <a href="">Blog</a>
     </nav>
+  </div>
   </header>
   <section class="intro container">
     <div class="intro-info">
@@ -103,16 +105,6 @@
   </section>
   <section class="feautured container">
     <div class="featured__card assets">
-      <!-- @@include("./partials/home-page-feautured-items/_feautured-item.html", {
-    "title-text": "Keep Assets",
-    "title-text-it": "Secure",
-    "featured-card-text": "We provide reliable, robust, and secure protection services to DeFi users, allowing them to secure investment assets against various risks.",
-    "list-1": "Smart Contract Vulnerability",
-    "list-2": "Custodian Risk",
-    "list-3": "IDO Event Risk",
-    "list-4": "Stablecoin Depeg Risk",
-    "btn-text": "Get Covered"
-    }) -->
       <div class="featured__card-item">
         <h2 class="title-h2">Keep Assets <span class="title-h2-it">Secure</span></h2>
         <p class="featured-card-text">
@@ -235,57 +227,98 @@
         "partner-name": "DeFiance Capital"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/ParafiCapital.d0c5f67aef63512c48bf9bcc8944d718.svg",
+        "partner-name": "Parafi Capital"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/HashkeyGroup.a7cf8bc12a2377cc3e638da81495569d.svg",
+        "partner-name": "HashKey Group"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/Huobi.882b0df8a531f957d418c348b189a455.svg",
+        "partner-name": "Huobi Defi Labs"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/HASHED.1687864a94a78668f611428c2ca40d78.svg",
+        "partner-name": "Hashed"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/SignumCapital.aaaa4358380463efe160418536dd3599.svg",
+        "partner-name": "Signum Capital"
         })
         @@include("./partials/partner-item/_partner-item.html", {
         "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
         "partner-name": "DeFiance Capital"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/IOSG.4737d028d7bc9890ccec8bf06b7d256a.svg",
+        "partner-name": "IOSG Ventures"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/imToken.66d18ccc13a0710e0d991656e888fb40.svg",
+        "partner-name": "imToken"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/LongHashVentures.570a5528f46a6690e6ce6a1fbe9462cf.svg",
+        "partner-name": "LongHash Ventures"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/BlockDreamFund.svg",
+        "partner-name": "Block Dream Fund"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/MapleLeafCapital.b739467a6a13265fda5f83af58901ca3.svg",
+        "partner-name": "Maple Leaf Capital"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/HashGlobal.9dda9fa18e74d85a2bf8b93798431ae2.svg",
+        "partner-name": "Hash Global"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/TembusuPartners.5e4171546e247e76b2e0a29350dca989.svg",
+        "partner-name": "Tembusu Partners"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/Lunex.d964e6b79a8550d49b5a313f9e7714b6.svg",
+        "partner-name": "Lunex Ventures"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/ArkStreamCapital.svg",
+        "partner-name": "Arc Stream Capital"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/DFG.81e961ae2d0ca57176b3e67c93c7b0a1.svg",
+        "partner-name": "DFG Capital"
         })
         @@include("./partials/partner-item/_partner-item.html", {
-        "partner-icon": "../img/partners-logo/DeFianceCapital.svg",
-        "partner-name": "DeFiance Capital"
+        "partner-icon": "../img/partners-logo/SevenX.2db43cfdb8a3efc9d4936db05ea291c7.svg",
+        "partner-name": "SevenX Ventures"
         })
+        @@include("./partials/partner-item/_partner-item.html", {
+        "partner-icon": "../img/partners-logo/IncubaAlpha.504fa00cf19fa82853e126fd6dccacf2.svg",
+        "partner-name": "Incuba Alpha"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/GFSVentures.cac825154ea5e3d79788e0913442a35d.svg",
+          "partner-name": "GFS Ventures"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/imToken.66d18ccc13a0710e0d991656e888fb40.svg",
+          "partner-name": "Dialectic"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/LayerXCapital.3f32dd61364380ea2e39.jpg",
+          "partner-name": "LayerX Capital"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/Staking.c3ed27fd29b64bba66b8a8aa00595a50.svg",
+          "partner-name": "Shima Capital"
+        })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/MapleLeafCapital.b739467a6a13265fda5f83af58901ca3.svg",
+          "partner-name": "Magic Ventures"
+        })
+
         </div>
 
         <div class="tab-content2">
@@ -297,6 +330,46 @@
         "partner-icon": "../img/partners-logo/Beefy.svg",
         "partner-name": "Beefy Finance"
         })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/Lunex.d964e6b79a8550d49b5a313f9e7714b6.svg",
+          "partner-name": "Lunex Ventures"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/ArkStreamCapital.svg",
+          "partner-name": "Arc Stream Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/DFG.81e961ae2d0ca57176b3e67c93c7b0a1.svg",
+          "partner-name": "DFG Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/SevenX.2db43cfdb8a3efc9d4936db05ea291c7.svg",
+          "partner-name": "SevenX Ventures"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/IncubaAlpha.504fa00cf19fa82853e126fd6dccacf2.svg",
+          "partner-name": "Incuba Alpha"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+            "partner-icon": "../img/partners-logo/GFSVentures.cac825154ea5e3d79788e0913442a35d.svg",
+            "partner-name": "GFS Ventures"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+            "partner-icon": "../img/partners-logo/imToken.66d18ccc13a0710e0d991656e888fb40.svg",
+            "partner-name": "Dialectic"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+            "partner-icon": "../img/partners-logo/LayerXCapital.3f32dd61364380ea2e39.jpg",
+            "partner-name": "LayerX Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+            "partner-icon": "../img/partners-logo/Staking.c3ed27fd29b64bba66b8a8aa00595a50.svg",
+            "partner-name": "Shima Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+            "partner-icon": "../img/partners-logo/MapleLeafCapital.b739467a6a13265fda5f83af58901ca3.svg",
+            "partner-name": "Magic Ventures"
+          })
        </div>
 
         <div class="tab-content3">
@@ -309,6 +382,34 @@
         "partner-icon": "../img/partners-logo/Bloomberg.svg",
         "partner-name": "Bloomberg"
         })
+        @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/MapleLeafCapital.b739467a6a13265fda5f83af58901ca3.svg",
+          "partner-name": "Maple Leaf Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/HashGlobal.9dda9fa18e74d85a2bf8b93798431ae2.svg",
+          "partner-name": "Hash Global"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/TembusuPartners.5e4171546e247e76b2e0a29350dca989.svg",
+          "partner-name": "Tembusu Partners"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/Lunex.d964e6b79a8550d49b5a313f9e7714b6.svg",
+          "partner-name": "Lunex Ventures"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/ArkStreamCapital.svg",
+          "partner-name": "Arc Stream Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/DFG.81e961ae2d0ca57176b3e67c93c7b0a1.svg",
+          "partner-name": "DFG Capital"
+          })
+          @@include("./partials/partner-item/_partner-item.html", {
+          "partner-icon": "../img/partners-logo/SevenX.2db43cfdb8a3efc9d4936db05ea291c7.svg",
+          "partner-name": "SevenX Ventures"
+          })
 
         </div>
       </div>
