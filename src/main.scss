@@ -6,6 +6,7 @@
 @import "./partials/home-page-feautured-items/feautured-item.scss";
 @import "./partials/buttons/buttons.scss";
 @import "./partials/partner-item/partner-item.scss";
+@import "./blog-template.scss";
 @import "./partials/footer/footer.scss";
 @import "./slick.scss";
 
@@ -475,38 +476,3 @@ display: flex;
   transform: translate(-50%, 0%) rotate(-45deg); 
 }
 }
-
-//blog
-
-.blog-template {
-  margin-top: 100px;
-  background-image: url(../img/blog/blog-back.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.blog-intro {
-  display: flex;
-}
-
-.blog-intro-main  {
-  width: 600px;
-  position: relative;
-}
-.blog-intro-main img {
-  position: absolute;
-  width: 600px;
-}
-
-.blog-slider-content {
-  position: absolute;
-}
-
-.blog-intro-main__content {
-
-}
-// .blog-intro-main {
-//   background-image: url(../img/blog/slider-blog.png);
-//   background-size: cover;
-//   height: auto;
-// }

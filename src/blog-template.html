@@ -10,18 +10,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./fonts/Playball-Regular.ttf">
   <link rel="stylesheet" href="./main.scss">
+  <title>Blog-Project</title>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
-  <title>Project</title>
+  <script src="https://kit.fontawesome.com/044cbb4e31.js" crossorigin="anonymous"></script>
   <script src="./js/main.js" defer></script>
 </head>
 
-<body>
-
-<div class="blog-template">
+<body class="blog-body">
+  <header class="header">
+    <div class="container">
+      <a href="./index.html" class="logo-link"> <img src="./img/Logo.png" alt="logo" class="logo">
+      </a>
+      <!-- burger closed -->
+      <div class="burger">
+        <div class="burger-item"></div>
+        <div class="burger-item"></div>
+        <div class="burger-item"></div>
+      </div>
+      <!-- burger active -->
+      <nav class="burger-menu">
+        <a href="#">Docs</a>
+        <a href="#">Get Listed</a>
+        <a href="http://localhost:9000/blog-template.html">Blog</a>
+        <a href="" class="btn">
+          <div class="btn-arrow cta">
+            <p class="btn__cta-title">WebApp</p>
+            <img class="arrow" src="./img/arrow.svg" alt="btn-arrow">
+          </div>
+        </a>
+      </nav>
+      <nav class="header__items">
+        <a href="" class="btn">
+          <div class="btn-arrow cta">
+            <p class="btn__cta-title">WebApp</p>
+            <img class="arrow" src="./img/arrow.svg" alt="btn-arrow">
+          </div>
+        </a>
+        <a href="">Docs</a>
+        <a href="">Get Listed</a>
+        <a href="">Blog</a>
+      </nav>
+    </div>
+  </header>
   <div class="container">
-  <div class="blog-header">
     <nav class="blog-header-nav">
       <a href="">Product</a>
       <a href="">Partnership</a>
@@ -33,24 +66,177 @@
       <div class="blog-intro-main">
         <img src="./img/blog/slider-blog.png" alt="">
         <div class="blog-slider-content">
-        <p class="blog-category">Product</p>
-        <h2 class="blog-title-h2">CDIS – THE FUTURE OF CENTRALISED CRYPTOCURRENCY EXCHANGES & CUSTODIANS, A WAY FORWARD 
-        </h2>
-        <p class="blog-date">November 17, 2022</p>
-        <p class="blog-subtitle">The Web3 industry has just witnessed the worst event in its decade-long history – the FTX collapse, devastating the confidence …
-        </p>
-      </div>
-        
-      </div>
+          <p class="blog-category">Product</p>
+         <a href=""> <h2 class="blog-title-h2">CDIS – THE FUTURE OF CENTRALISED CRYPTOCURRENCY EXCHANGES & CUSTODIANS, A WAY
+            FORWARD
+          </h2>
+        </a>
+          <div class="date-awesome">
+            <i class="fa-solid fa-calendar"></i>
+            <p class="blog-date">November 17, 2022</p>
+          </div>
+          <p class="blog-subtitle">The Web3 industry has just witnessed the worst event in its decade-long history –
+            the FTX collapse, devastating the confidence …
+          </p>
+        </div>
       </div>
       <div class="blog-intro-aside">
-        <img class="blog-intro-aside__img" src="" alt="">
-        <p class="blog-category">Education</p>
-        <p class="blog-intro-aside__title">3 Reasons Crypto Holders Are Buying Custodian Risk Cover</p>
+        <img class="blog-intro-aside__img" src="./img/blog/main-blog-img.png" alt="">
+        <div class="blog-intro-aside__titles">
+          <p class="blog-category">Education</p>
+         <a href=""> <p class="blog-intro-aside__title">3 Reasons Crypto Holders Are Buying Custodian Risk Cover</p></a>
+        </div>
+        <div class="blog-intro-aside__titles">
+          <p class="blog-category">Education</p>
+          <a href=""><p class="blog-intro-aside__title">How Do DeFi Protocols Get Hacked?</p></a>
+        </div>
+        <div class="blog-intro-aside__titles">
+          <p class="blog-category">COMMUNITY</p>
+         <a href=""><p class="blog-intro-aside__title">FTX Collapse – Cover Holder & Community Update</p></a> 
+        </div>
+        <div class="blog-intro-aside__titles">
+          <p class="blog-category">Others</p>
+         <a href=""> <p class="blog-intro-aside__title">Web 3 Insurance: What is Underwriting?</p></a>
+        </div>
       </div>
     </div>
+
   </div>
-</div>
-</div>
+  <section class="container">
 
+    <div class="blog-section">
+      <div class="blog-section__title">
+        <h4 class="blog-title-h4">Product</h4>
+        <a href="">More in product</a>
+      </div>
 
+      <div class="product">
+        @@include("./partials/blog-items/_blog-item.html", {
+        "blog-item-banner": "../img/blog/Advisory-Board-Report-4.png",
+        "blog-item-title": "CDIS – THE FUTURE OF CENTRALISED CRYPTOCURRENCY EXCHANGES & CUSTODIANS, A WAY FORWARD",
+        "blog-date": "November 17, 2022",
+        "blog-subtitle": "The Web3 industry has just witnessed the worst event in its decade-long…"
+        })
+        @@include("./partials/blog-items/_blog-item.html", {
+        "blog-item-banner": "../img/blog/Custodian-Risk-Cover-1.jpeg",
+        "blog-item-title": "Product Relaunch – Custodian Risk Cover",
+        "blog-date": "November 1, 2022",
+        "blog-subtitle": "Following a review of our cover wording and risk assessment strategies after UST de-peg event, the InsurAce team is thrilled to announce the relaunch of the updated Custodian Risk Cover product. Check details now."
+        })
+        @@include("./partials/blog-items/_blog-item.html", {
+        "blog-item-banner": "../img/blog/MicrosoftTeams-image-13.jpeg",
+        "blog-item-title": "InsurAce.io emerges from UST De-Peg payout with new V2 Updates",
+        "blog-date": "August 1, 2022",
+        "blog-subtitle": "Fresh UI Features Dominate the Latest batch of v2 Updates following a pause on services caused by the UST De-Peg event."
+        })
+      </div>
+      <div class="divider"></div>
+    </div>
+    <div class="divided-section">
+      <div class="blog-section">
+        <div class="blog-section__title">
+          <h4 class="blog-title-h4">Partnership</h4>
+          <a href="">More in partnership</a>
+        </div>
+
+        <div class="partnership-block">
+          @@include("./partials/blog-items/_blog-item.html", {
+          "blog-item-banner": "../img/blog/MicrosoftTeams-image-2022-10-24T103046.129.png",
+          "blog-item-title": "InsurAce Lists Hubble Protocol to Facilitate Secure DeFi-Lending on Solanas Fastest-growing Stablecoin Platform",
+          "blog-date": "October 25, 2022",
+          "blog-subtitle": "InsurAce Lists Hubble Protocol — one of the fastest-growing Stablecoin platforms on the Solana network."
+          })
+          @@include("./partials/blog-items/_blog-item.html", {
+          "blog-item-banner": "../img/blog/MicrosoftTeams-image-78.jpeg",
+          "blog-item-title": "We are UPLIFTED with this new partnership!",
+          "blog-date": "September 16, 2022",
+          "blog-subtitle": "InsurAce confirms their official relationship with Uplift DAO. Read more in this blog"
+          })
+          @@include("./partials/blog-items/_blog-item.html", {
+          "blog-item-banner": "../img/blog/ten-partnership.png",
+          "blog-item-title": "InsurAce.io and Ten Finance have confirmed a long-term partnership to offer a greater peace of mind to investors",
+          "blog-date": "May 27, 2022",
+          "blog-subtitle": "Take a moment to read what InsurAce and Ten Finance partnership is going to bring to our community!"
+          })
+        </div>
+      </div>
+      <div class="blog-section">
+        <div class="blog-section__title">
+          <h4 class="blog-title-h4">Bi-weekly Report</h4>
+          <a href="">More in Bi-weekly report</a>
+        </div>
+
+        <div class="report-block">
+          @@include("./partials/blog-items/_blog-item.html", {
+          "blog-item-banner": "../img/blog/bi-weekly-1.png",
+          "blog-item-title": "InsurAce.io Biweekly Updates (Oct 17 – Oct 30)",
+          "blog-date": "November 1, 2022",
+          "blog-subtitle": "InsurAce.io project progress from Oct 17 to Oct 30, 2022."
+          })
+          @@include("./partials/blog-items/_blog-item.html", {
+          "blog-item-banner": "../img/blog/bi-weekly-1.png",
+          "blog-item-title": "InsurAce.io Biweekly Updates (Oct 03 – Oct 16)",
+          "blog-date": "October 20, 2022",
+          "blog-subtitle": "Check out the project progress from Oct 03 to Oct 16, 2022."
+          })
+          @@include("./partials/blog-items/_blog-item.html", {
+          "blog-item-banner": "../img/blog/bi-weekly-1.png",
+          "blog-item-title": "InsurAce.io Biweekly Updates (Sep 19 – Oct 02)",
+          "blog-date": "October 5, 2022",
+          "blog-subtitle": "InsurAce.io project progress from Sep 19 to Oct 02, 2022."
+          })
+        </div>
+      </div>
+    </div>
+    <div class="blog-section all-news">
+    <h4 class="blog-title-h4">All posts</h4>
+    <div class="all-posts-section">
+      <div class="blog-item">
+        <img src="./img/blog/3Reason.jpeg" alt="">
+        <div class="rounded-date">
+          <div class="wrapper-date">
+            <p class="blog-date">Nov</p>
+            <p class="blog-date">15</p>
+          </div>
+        </div>
+       <a href=""><h5 class="blog-item-h5">3 Reasons Crypto Holders Are Buying Custodian Risk Cover
+        </h5></a> 
+
+        <p class="blog-subtitle">Following the shocking billion-dollar bankruptcy of Celsius Network, Voyager and FTX, crypto users are now buying InsurAce’s newly-revamped Custodian Risk cover.</p>
+      </div>
+
+      <div class="blog-item">
+        <img src="./img/blog/3Reason.jpeg" alt="">
+        <div class="rounded-date">
+          <div class="wrapper-date">
+            <p class="blog-date">Nov</p>
+            <p class="blog-date">15</p>
+          </div>
+        </div>
+      <a href=""> <h5 class="blog-item-h5">How Do DeFi Protocols Get Hacked?
+        </h5></a> 
+
+        <p class="blog-subtitle">We’ve studied some of the high-profile hacks that happened in the blockchain space. In this article, we describe the most common DeFi exploits that cybercrime experts have uncovered over the last 3 years.</p>
+      </div>
+      <div class="blog-item">
+        <img src="./img/blog/MicrosoftTeams-image-94.png" alt="">
+        <div class="rounded-date">
+          <div class="wrapper-date">
+            <p class="blog-date">Nov</p>
+            <p class="blog-date">06</p>
+          </div>
+        </div>
+       <a href=""><h5 class="blog-item-h5">3 Reasons Crypto Holders Are Buying Custodian Risk Cover
+        </h5></a> 
+
+        <p class="blog-subtitle">Following the shocking billion-dollar bankruptcy of Celsius Network, Voyager and FTX, crypto users are now buying InsurAce’s newly-revamped Custodian Risk cover.</p>
+      </div>
+      
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      @@include("./partials/footer/_footer.html")
+    </div>
+  </footer>
+</body>
