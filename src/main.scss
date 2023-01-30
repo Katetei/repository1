@@ -1,27 +1,34 @@
-body * {
-  outline: 1px solid lightgrey;
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-.main-menu li{
-  display: inline;
+
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #777777;
+  padding: 50px;
 }
+
 .container {
-  border: solid 3px red;
-}
-.container.sub-menu {
-  border: dotted 3px green;
-}
-.blocks-paragraph span {
-  display: block;
-}
-.container.blocks-paragraph p {
-  color: green;
-}
-.paragraph p {
-  display:inline-block;
-  color: blue;
+background-color: #f7f7f7;
 }
 
-.container.paragraph {
-  border: double 3px green;
-}
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(270deg, rgba(15, 27, 70, 0.65) 0%, rgba(217, 217, 217, 0) 102.41%), url(../img/header-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 
+  &__logo {
+    height: 70px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+}
